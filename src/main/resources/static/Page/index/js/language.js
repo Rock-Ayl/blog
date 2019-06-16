@@ -22,7 +22,7 @@ function loadProperties(type) {
             //主页目录
             $('#skillBolg').html($.i18n.prop('string_skillBolg'))
             $('#string_Sharing').html($.i18n.prop('string_Sharing'))
-            $('#string_Login').html($.i18n.prop('string_Login'))
+            $('#string_UtilOnline').html($.i18n.prop('string_UtilOnline'))
             $('#resume').html($.i18n.prop('string_resume'))
             $('#aboutMe').html($.i18n.prop('string_aboutMe'))
             $('#resourceFolder').html($.i18n.prop('string_resourceFolder'))
@@ -39,6 +39,11 @@ function loadProperties(type) {
             $('#string_returnMain4').html($.i18n.prop('string_returnMain4'))
             $('#string_returnMain5').html($.i18n.prop('string_returnMain5'))
             $('#string_returnMain6').html($.i18n.prop('string_returnMain6'))
+            //次级页面标题
+            $('#string_csdnUrl').html($.i18n.prop('string_csdnUrl'))
+            $('#string_GitHubUrl').html($.i18n.prop('string_GitHubUrl'))
+            $('#string_commintsBuilding').html($.i18n.prop('string_commintsBuilding'))
+            $('#string_aboutMe2').html($.i18n.prop('string_aboutMe2'))
         }
     });
 }
