@@ -14,16 +14,16 @@ public class PageController {
 
     @RequestMapping(value = "/Index", method = RequestMethod.GET)
     public String getIndex() {
-        return "/index/index";
+        return "/Page/index/index";
     }
 
     @RequestMapping(value = "/UserLogin")
     public String getUserLogin() {
-        return "login/login";
+        return "/Page/login/login";
     }
 
     @RequestMapping(value = "/Error")
     public String getError() {
-        return "error/error";
+        return "/Page/error/error";
     }
 }

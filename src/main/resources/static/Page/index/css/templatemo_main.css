@@ -63,7 +63,7 @@ img {
     position: absolute;
     left: 50%; /*设置家在动画居中*/
     top: 50%; /*设置家在动画居中*/
-    background-image: url(../images/time.gif); /*加载动画gif*/
+    background-image: url(https://anyongliang.oss-cn-beijing.aliyuncs.com/blog/web/index/images/time.gif); /*加载动画gif*/
     background-repeat: no-repeat;
     background-position: center;
     margin: -150px 0 0 -150px; /*设置加载时外边距*/
