@@ -18,7 +18,7 @@ jdk1.8
 
 gradle 
 
-开发工具：IEEA 2017， sublime text 3,Hbuilder X
+开发工具：IEEA 2017， sublime text 3， Hbuilder X
 
 实例地址：www.anyongliang.cn 
 
@@ -29,6 +29,7 @@ gradle
 web：
 
 1:JQuery
+
 2:i18n(国际化)
 
 server:
@@ -45,6 +46,6 @@ server:
 -----------------------------------
 Redis：用户缓存
 
-mongoDB:Js的存储
+mongoDB: Js的存储
 
-MariaDB:基于Mysql的关系型数据库,用的是较新的版本，或者至少10.2.1以上
+MariaDB: 基于Mysql的关系型数据库,用的是较新的版本，或者至少10.2.1以上
