@@ -1,0 +1,43 @@
+group 'cn.anyongliang'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    //spring-boot依赖
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: '2.1.5.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.1.5.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version: '2.1.5.RELEASE'
+
+    //权限框架依赖
+    compile group: 'org.apache.shiro', name: 'shiro-core', version: '1.4.0'
+    //junit-测试
+    compile group: 'junit', name: 'junit', version: '4.12'
+    //mongo-Bson
+    compile group: 'org.mongodb', name: 'mongo-java-driver', version: '3.8.2'
+    //google-Gson
+    compile group: 'com.google.code.gson', name: 'gson', version: '2.8.5'
+    //apache-commons工具包
+    compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.1.1'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.6'
+    compile group: 'commons-io', name: 'commons-io', version: '2.5'
+    compile group: 'commons-codec', name: 'commons-codec', version: '1.10'
+    //mysql-jdbc
+    compile group: 'mysql', name: 'mysql-connector-java', version: '6.0.6'
+    //redis,redisson
+    compile group: 'redis.clients', name: 'jedis', version: '2.9.0'
+    compile group: 'org.redisson', name: 'redisson', version: '3.5.4'
+    //LRU的缓存cache
+    compile group: 'com.github.ben-manes.caffeine', name: 'caffeine', version: '2.6.0'
+    //发送邮件
+    compile group: 'javax.mail', name: 'javax.mail-api', version: '1.5.6'
+    //定时器 quartz
+    compile group: 'org.quartz-scheduler', name: 'quartz', version: '2.3.0'
+
+}

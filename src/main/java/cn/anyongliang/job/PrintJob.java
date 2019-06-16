@@ -1,0 +1,20 @@
+package cn.anyongliang.job;
+
+import org.quartz.DisallowConcurrentExecution;
+import org.quartz.Job;
+import org.quartz.JobExecutionContext;
+import org.quartz.JobExecutionException;
+
+/**
+ * Created by anyongliang 2019-5-10
+ * 打印任务的demo
+ */
+@DisallowConcurrentExecution
+public class PrintJob implements Job {
+
+    @Override
+    public void execute(JobExecutionContext context) throws JobExecutionException {
+        System.out.println("执行定时器任务ing...");
+    }
+
+}
