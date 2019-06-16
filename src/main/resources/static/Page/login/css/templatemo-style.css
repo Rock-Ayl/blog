@@ -170,10 +170,10 @@ p {
 
 
 .cb-slideshow li:nth-child(1) { 
-    background-image: url(../img/letter_bg_01.jpg)
+    background-image: url(http://anyongliang.oss-cn-beijing.aliyuncs.com/blog/web/login/images/letter_bg_01.jpg)
 }
 .cb-slideshow li:nth-child(2) { 
-    background-image: url(../img/letter_bg_02.jpg);
+    background-image: url(http://anyongliang.oss-cn-beijing.aliyuncs.com/blog/web/login/images/letter_bg_02.jpg);
     -webkit-animation-delay: 12s;
     -moz-animation-delay: 12s;
     -o-animation-delay: 12s;
@@ -181,7 +181,7 @@ p {
     animation-delay: 12s; 
 }
 .cb-slideshow li:nth-child(3) { 
-    background-image: url(../img/letter_bg_03.jpg);
+    background-image: url(http://anyongliang.oss-cn-beijing.aliyuncs.com/blog/web/login/images/letter_bg_03.jpg);
     -webkit-animation-delay: 24s;
     -moz-animation-delay: 24s;
     -o-animation-delay: 24s;
@@ -189,15 +189,15 @@ p {
     animation-delay: 24s; 
 }
 .cb-slideshow li:nth-child(4) { 
-    background-image: url(../img/letter_bg_01.jpg);
+    background-image: url(http://anyongliang.oss-cn-beijing.aliyuncs.com/blog/web/login/images/letter_bg_01.jpg);
     animation-delay: 36s; 
 }
 .cb-slideshow li:nth-child(5) { 
-    background-image: url(../img/letter_bg_02.jpg);
+    background-image: url(http://anyongliang.oss-cn-beijing.aliyuncs.com/blog/web/login/images/letter_bg_02.jpg);
     animation-delay: 48s; 
 }
 .cb-slideshow li:nth-child(6) { 
-    background-image: url(../img/letter_bg_03.jpg);
+    background-image: url(http://anyongliang.oss-cn-beijing.aliyuncs.com/blog/web/login/images/letter_bg_03.jpg);
     animation-delay: 60s; 
 }
 

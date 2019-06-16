@@ -9,7 +9,7 @@
 }
 .cb-slideshow:after { 
     content: '';
-    background: transparent url(../images/pattern.png) repeat top left; 
+    background: transparent url(http://anyongliang.oss-cn-beijing.aliyuncs.com/blog/web/login/images/pattern.png) repeat top left;
 }
 .cb-slideshow li span { 
     width: 100%;
