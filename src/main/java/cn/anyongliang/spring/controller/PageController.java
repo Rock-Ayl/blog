@@ -17,12 +17,12 @@ public class PageController {
         return "/index/index";
     }
 
-    @RequestMapping("/UserLogin")
+    @RequestMapping(value = "/UserLogin")
     public String getUserLogin() {
         return "login/login";
     }
 
-    @RequestMapping("/Error")
+    @RequestMapping(value = "/Error")
     public String getError() {
         return "error/error";
     }
