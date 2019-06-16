@@ -1,13 +1,13 @@
-# blog
+# blog项目
 ------------------------------------
-author:安永亮
-startTime:2018-11-1
+开发人员:安永亮 
+初始时间:2018-11-1
 ------------------------------------
 开发环境：
-windows 7
-jdk1.8
-gradle
+windows 7 ，
+jdk1.8 ，
+gradle ，
 IDEA
 ------------------------------------
-实例地址：www.anyongliang.cn
+实例地址：www.anyongliang.cn ，
 服务器： centos_6_09_64
