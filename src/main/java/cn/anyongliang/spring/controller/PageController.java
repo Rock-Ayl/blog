@@ -9,7 +9,7 @@ public class PageController {
 
     @RequestMapping(value = "/pageIndex", method = RequestMethod.GET)
     public String page() {
-        return "index";
+        return "/index/index";
     }
 
     @RequestMapping("/pageLogin")
