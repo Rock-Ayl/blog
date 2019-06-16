@@ -1,505 +1,488 @@
 <!DOCTYPE html>
 <html class="no-js">
-    <head>
-        <meta charset="utf-8">
+<head>
+    <meta charset="utf-8">
+    <title>安永亮の小站</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/templatemo_main.css">
+</head>
+<body>
 
-        <title>安永亮の小站</title>
-
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
-        
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/templatemo_main.css">
-        
-    </head>
-    <body>
-        
-        <div id="main-wrapper">
-        	
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center templatemo-logo margin-top-20">
-            	 <span id="string_loginName" style="float: right;color: white;"></span><br />
-            	 <span id="string_loginState" style="float: right;color: white;"></span><br />
-            	 <span id="string_loginInsert" style="color: yellow;cursor: pointer;float: right;" onclick="doLogin()" ></span>
-                <h1 class="templatemo-site-title">
-                    <a href="#">
-                    	<span id="string_h1"></span>
-                    </a>
-                </h1>
-                <h3 class="templatemo-site-title">
-                	 (*/ω＼*)
-                	<a href="#">
+<div id="main-wrapper">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center templatemo-logo margin-top-20">
+        <span id="string_loginName" style="float: right;color: white;"></span><br/>
+        <span id="string_loginState" style="float: right;color: white;"></span><br/>
+        <span id="string_loginInsert" style="color: yellow;cursor: pointer;float: right;" onclick="doLogin()"></span>
+        <h1 class="templatemo-site-title">
+            <a href="#">
+                <span id="string_h1"></span>
+            </a>
+        </h1>
+        <h3 class="templatemo-site-title">
+            (*/ω＼*)
+            <a href="#">
                 		<span class="blue">
                 			<span id="string_h2_1" onclick="doError()"></span>
                 		</span>
-                		<span class="green">
+                <span class="green">
                 			<span id="string_h2_2" onclick="doError()"></span>
                 		</span>
-                	</a>
-                	(～￣▽￣)～ 
-                	
-                </h3>
-                <h4 class="templatemo-site-title">小站还在开发中.....汗</h4>
-            </div>
-
-            <div class="image-section">
-                <div class="image-container">
-                    <img src="images/zoom-bg-1.jpg" id="menu-img" class="main-img inactive" alt="Zoom HTML5 Template by templatemo.com">
-                    <img src="images/zoom-bg-2.jpg" id="products-img" class="inactive" alt="Product">
-                    <img src="images/zoom-bg-3.jpg" id="services-img"  class="inactive" alt="Services">
-                    <img src="images/zoom-bg-4.jpg" id="about-img" class="inactive" alt="About">
-                    <img src="images/zoom-bg-5.jpg" id="contact-img" class="inactive" alt="Contact">
-                    <img src="images/zoom-bg-6.jpg" id="company-intro-img" class="main-img inactive" alt="Company Intro">
-                    <img src="images/zoom-bg-7.jpg" id="testimonials-img" class="main-img inactive" alt="Testimonials">
-                </div>
-            </div>
-            <div class="container"  style="height: 650px;">
-                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 templatemo-content-wrapper">
-                    <div class="templatemo-content">
-                        
-                        <section id="menu-section" class="active">
-                            <div class="row">
-                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                    <a href="#products" class="change-section">
-                                        <div class="black-bg btn-menu">
-                                            <i class="fa fa-cubes"></i>
-                                            <h2>
-                                            	<span id="skillBolg"></span>
-                                            </h2>
-                                        </div>
-                                    </a>
+            </a>
+            (～￣▽￣)～
+        </h3>
+        <h4 class="templatemo-site-title">小站还在开发中.....汗</h4>
+    </div>
+    <div class="image-section">
+        <div class="image-container">
+            <img src="images/zoom-bg-1.jpg" id="menu-img" class="main-img inactive"
+                 alt="Zoom HTML5 Template by templatemo.com">
+            <img src="images/zoom-bg-2.jpg" id="products-img" class="inactive" alt="Product">
+            <img src="images/zoom-bg-3.jpg" id="services-img" class="inactive" alt="Services">
+            <img src="images/zoom-bg-4.jpg" id="about-img" class="inactive" alt="About">
+            <img src="images/zoom-bg-5.jpg" id="contact-img" class="inactive" alt="Contact">
+            <img src="images/zoom-bg-6.jpg" id="company-intro-img" class="main-img inactive" alt="Company Intro">
+            <img src="images/zoom-bg-7.jpg" id="testimonials-img" class="main-img inactive" alt="Testimonials">
+        </div>
+    </div>
+    <div class="container" style="height: 650px;">
+        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 templatemo-content-wrapper">
+            <div class="templatemo-content">
+                <section id="menu-section" class="active">
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
+                            <a href="#products" class="change-section">
+                                <div class="black-bg btn-menu">
+                                    <i class="fa fa-cubes"></i>
+                                    <h2>
+                                        <span id="skillBolg"></span>
+                                    </h2>
                                 </div>
-                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                    <a href="#services" class="change-section">
-                                        <div class="black-bg btn-menu">
-                                            <i class="fa fa-laptop"></i>
-                                            <h2>
-                                            	<span id="string_Sharing"></span>
-                                            </h2>
-                                        </div>
-                                    </a>
+                            </a>
+                        </div>
+                        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
+                            <a href="#services" class="change-section">
+                                <div class="black-bg btn-menu">
+                                    <i class="fa fa-laptop"></i>
+                                    <h2>
+                                        <span id="string_Sharing"></span>
+                                    </h2>
                                 </div>
-                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                    <a href="#about" class="change-section">
-                                        <div class="black-bg btn-menu">
-                                            <i class="fa fa-users"></i>
-                                            <h2>
-                                            	<span id="aboutMe"></span>
-                                            </h2>
-                                        </div>
-                                    </a>
+                            </a>
+                        </div>
+                        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
+                            <a href="#about" class="change-section">
+                                <div class="black-bg btn-menu">
+                                    <i class="fa fa-users"></i>
+                                    <h2>
+                                        <span id="aboutMe"></span>
+                                    </h2>
                                 </div>
-                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                    <a href="#company-intro" class="change-section">
-                                        <div class="black-bg btn-menu">
-                                            <i class="fa fa-envelope"></i>
-                                            <h2>
-                                            	<span id="resume"></span>
-                                            </h2>
-                                        </div>
-                                    </a>
+                            </a>
+                        </div>
+                        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
+                            <a href="#company-intro" class="change-section">
+                                <div class="black-bg btn-menu">
+                                    <i class="fa fa-envelope"></i>
+                                    <h2>
+                                        <span id="resume"></span>
+                                    </h2>
                                 </div>
-                            
-                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 margin-bottom-20">
-                                    <a href="#contact" class="change-section">
-                                        <div class="black-bg btn-menu">
-                                            <h2>
-                                            	<span id="string_Login"></span>
-                                            </h2>
-                                        </div>
-                                    </a>
+                            </a>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 margin-bottom-20">
+                            <a href="#contact" class="change-section">
+                                <div class="black-bg btn-menu">
+                                    <h2>
+                                        <span id="string_Login"></span>
+                                    </h2>
                                 </div>
-                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 margin-bottom-20">
-                                    <a href="#testimonials" class="change-section">
-                                        <div class="black-bg btn-menu">
-                                            <h2>
-                                            	<span id="resourceFolder"></span>
-                                            </h2>
-                                        </div>
-                                    </a>
+                            </a>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 margin-bottom-20">
+                            <a href="#testimonials" class="change-section">
+                                <div class="black-bg btn-menu">
+                                    <h2>
+                                        <span id="resourceFolder"></span>
+                                    </h2>
                                 </div>
-                              
+                            </a>
+                        </div>
+                    </div>
+                </section><!-- /.menu-section -->
+                <section id="products-section" class="inactive">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6 col-lg-6 margin-bottom-20">
+                            <div class="black-bg col-sm-12 col-md-12 col-lg-12">
+                                <h2>Web 项目</h2>
+                                <p>
+                                    <a rel="nofollow" href="https://blog.csdn.net/qq_42461790/article/details/83627107">
+                                        1:与钉钉接口进行对接的注意事项
+                                    </a>
+                                    <br/>
+                                    <br/>
+                                    <a href="https://blog.csdn.net/qq_42461790/article/details/84260251">
+                                        2:java通过接口发送邮件（新手向）
+                                    </a>
+                                </p>
                             </div>
-                        </section><!-- /.menu-section -->    
-                        <section id="products-section" class="inactive" >
-                            <div class="row">
-                                <div class="col-sm-6 col-md-6 col-lg-6 margin-bottom-20">
-                                    <div class="black-bg col-sm-12 col-md-12 col-lg-12">
-                                        <h2>Web 项目</h2>
-                                        <p>
-                                        	<a rel="nofollow" href="https://blog.csdn.net/qq_42461790/article/details/83627107">
-                                        		1:与钉钉接口进行对接的注意事项
-                                        	</a>
-                                        	<br />
-                                        	<br />
-                                        	<a href="https://blog.csdn.net/qq_42461790/article/details/84260251">
-                                        		2:java通过接口发送邮件（新手向）
-                                        	</a>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 col-md-6 col-lg-6">
-                                    <div class="black-bg col-sm-12 col-md-12 col-lg-12">
-                                        <h2>其他 技术</h2>
-                                        <p>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <div class="black-bg col-sm-12 col-md-12 col-lg-12">
+                                <h2>其他 技术</h2>
+                                <p>
                                         	<span class="green">
                                         		第一段：无
                                         	</span> 第一行：无
-                                        </p>
-                                    </div>
-                                </div>
+                                </p>
                             </div>
-                            <div class="row margin-top-20">
-                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  pull-right">
-                                    <a onclick="reload()" style="cursor: pointer;" class="change-section">
-                                        <div class="black-bg btn-menu">
-                                            <h2>
-                                            	<span id="string_returnMain1"></span>
-                                            </h2>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </section><!-- /.product-section -->    
-                        <section id="services-section" class="inactive">
-                            <div class="row">
-                                <div class="col-sm-12 col-md-12 col-lg-12">
-                                    <div class="col-sm-12 col-md-12 col-lg-12 black-bg">
-                                        <h2>有趣的分享~</h2>
-                                        <p>
-                                        	第一行：无
-                                        </p>
-                                        <p>
-                                        	第二行：无
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row margin-top-20">
-                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  pull-right">
-                                    <a onclick="reload()" style="cursor: pointer;" class="change-section">
-                                        <div class="black-bg btn-menu">
-                                            <h2>
-                                            	<span id="string_returnMain2"></span>
-                                            </h2>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </section><!-- /.services-section -->    
-                        <section id="about-section" class="inactive">
-                            <div class="row">
-                                <div class="black-bg col-sm-12 col-md-12 col-lg-12">
-                                    <h2 class="text-center">关于我</h2>
-                                    <div class="col-sm-6 col-md-6">
-                                        <p>
-                                        	大家好，我是安永亮，新入行的小白码农，正在向大佬发展ing....
-                                        </p>
-                                        <p>
-                                        	----End----
-                                        </p>
-                                    </div>
-                                    <div class="col-sm-6 col-md-6">
-                                    	<p>
-                                        	个人发展经历：
-                                        </p>
-                                        <a style="font-size: 16px;" href="https://blog.csdn.net/qq_42461790/article/details/84260503">
-                                        	1.从开发的超级小白变成小白的故事
-                                        </a>
-                                        <p>
-                                        	----End----
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row margin-top-20">
-                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  pull-right">
-                                    <a onclick="reload()" style="cursor: pointer;" class="change-section">
-                                        <div class="black-bg btn-menu">
-                                            <h2>
-                                            	<span id="string_returnMain3"></span>
-                                            </h2>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </section>  
-                        <section id="contact-section" class="inactive">
-                            <div class="row">
-                                <div class="black-bg col-sm-12 col-md-12 col-lg-12">
-                                    <h2 class="text-center">用户登录</h2>
-                                    
-                                    <div class="col-sm-12 col-md-12">
-                                        <p>
-                                        	对不起！该页面暂时没有完工
-                                        </p>
-                                    </div>
-                                    
-                                    <div class="col-sm-6 col-md-6">
-                                        <div id="map-canvas"></div>
-                                        <p>对不起！该页面暂时没有完工</p>
-                                    </div>
-
-                                    <div class="col-sm-6 col-md-6 margin-bottom-20">
-                                        <form action="#" method="post">
-
-                                                <div class="form-group">
-                                                    <!--<label for="contact_name">Name</label>-->
-                                                    <input type="text" id="contact_name" class="form-control" placeholder="账号" />
-                                                </div>
-                                                <div class="form-group">
-                                                    <!--<label for="contact_email">Email Address</label>-->
-                                                    <input type="text" id="contact_email" class="form-control" placeholder="密码" />
-                                                </div>
-                                                <div class="form-group">
-                                                    <!--<label for="contact_message">Message</label>-->
-                                                    <textarea id="contact_message" class="form-control" rows="7" placeholder="对不起！该页面暂时没有完工"></textarea>
-                                                </div>
-                                                <button type="submit" class="btn btn-primary">Send</button>
-
-                                        </form>
-                                    </div>
-                                    
-                                    <div class="clearfix"></div>
-                                </div>
-                            </div>
-                            <div class="row margin-top-20">
-                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  pull-right">
-                                    <a onclick="reload()" style="cursor: pointer;" class="change-section">
-                                        <div class="black-bg btn-menu">
-                                            <h2>
-                                            	<span id="string_returnMain4"></span>
-                                            </h2>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </section><!-- /.contact-section -->    
-                        <section id="company-intro-section" class="inactive">
-                            <div class="row">
-                                <div class="black-bg col-sm-12 col-md-12 col-lg-12">
-                                    <h2 class="text-center">微简历</h2>
-                                    <div class="col-sm-12 col-md-12">
-                                        <p>
-                                        	<a href="#">动画版简历</a>
-                                        </p>
-                                        <p>
-                                        	<a href="#">标准打印版简历</a> 
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row margin-top-20">
-                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  pull-right">
-                                    <a onclick="reload()" style="cursor: pointer;" class="change-section">
-                                        <div class="black-bg btn-menu">
-                                            <h2>
-                                            	<span id="string_returnMain5"></span>
-                                            </h2>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </section><!-- /.company-intor-section -->    
-                        <section id="testimonials-section" class="inactive">
-                            <div class="row">
-                                <div class="black-bg col-sm-12 col-md-12 col-lg-12">
-                                    
-                                    <h2 class="text-center">资源文件夹</h2>
-                                    <div class="col-sm-12 col-md-12">
-                                        <p>
-                                        	第一行：内容-无
-                                        </p>
-                                        <p>
-                                        	第二行：内容-无
-                                        </p>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="row margin-top-20">
-                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  pull-right">
-                                    <a onclick="reload()" style="cursor: pointer;" class="change-section">
-                                        <div class="black-bg btn-menu">
-                                            <h2>
-                                            	<span id="string_returnMain6"></span>
-                                            </h2>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </section> 
+                        </div>
                     </div>
-                </div>
-            </div>
+                    <div class="row margin-top-20">
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  pull-right">
+                            <a onclick="reload()" style="cursor: pointer;" class="change-section">
+                                <div class="black-bg btn-menu">
+                                    <h2>
+                                        <span id="string_returnMain1"></span>
+                                    </h2>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </section><!-- /.product-section -->
+                <section id="services-section" class="inactive">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <div class="col-sm-12 col-md-12 col-lg-12 black-bg">
+                                <h2>有趣的分享~</h2>
+                                <p>
+                                    第一行：无
+                                </p>
+                                <p>
+                                    第二行：无
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row margin-top-20">
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  pull-right">
+                            <a onclick="reload()" style="cursor: pointer;" class="change-section">
+                                <div class="black-bg btn-menu">
+                                    <h2>
+                                        <span id="string_returnMain2"></span>
+                                    </h2>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </section><!-- /.services-section -->
+                <section id="about-section" class="inactive">
+                    <div class="row">
+                        <div class="black-bg col-sm-12 col-md-12 col-lg-12">
+                            <h2 class="text-center">关于我</h2>
+                            <div class="col-sm-6 col-md-6">
+                                <p>
+                                    大家好，我是安永亮，新入行的小白码农，正在向大佬发展ing....
+                                </p>
+                                <p>
+                                    ----End----
+                                </p>
+                            </div>
+                            <div class="col-sm-6 col-md-6">
+                                <p>
+                                    个人发展经历：
+                                </p>
+                                <a style="font-size: 16px;"
+                                   href="https://blog.csdn.net/qq_42461790/article/details/84260503">
+                                    1.从开发的超级小白变成小白的故事
+                                </a>
+                                <p>
+                                    ----End----
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row margin-top-20">
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  pull-right">
+                            <a onclick="reload()" style="cursor: pointer;" class="change-section">
+                                <div class="black-bg btn-menu">
+                                    <h2>
+                                        <span id="string_returnMain3"></span>
+                                    </h2>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <section id="contact-section" class="inactive">
+                    <div class="row">
+                        <div class="black-bg col-sm-12 col-md-12 col-lg-12">
+                            <h2 class="text-center">用户登录</h2>
+                            <div class="col-sm-12 col-md-12">
+                                <p>
+                                    对不起！该页面暂时没有完工
+                                </p>
+                            </div>
 
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footer" style="width: 340px;">
-                    <p class="footer-text">
-                    	@ <span id="skillBy"></span>:&nbsp;<span id="anyongliang"></span><br />
-                    	@ <span id="webSite"></span>:&nbsp;<span onclick="doError()" id="string_Tit" style="cursor: pointer;color: yellow;"></span><br />
-                    	@ <span id="sl"></span>&nbsp;<span id="switch" onclick="switchLang()" style="cursor:pointer; color: yellow;";></span><br />
-                    	@ <span id="string_version"></span>:&nbsp;1.0.0.1<span onclick="doError()" id="string_Tit" style="cursor: pointer;color: yellow;"></span><br />
-                        @ <span id="string_RecordNum"></span>:&nbsp;京ICP备18058338号 
-                    </p>
-                </div>
+                            <div class="col-sm-6 col-md-6">
+                                <div id="map-canvas"></div>
+                                <p>对不起！该页面暂时没有完工</p>
+                            </div>
+                            <div class="col-sm-6 col-md-6 margin-bottom-20">
+                                <form action="#" method="post">
+                                    <div class="form-group">
+                                        <!--<label for="contact_name">Name</label>-->
+                                        <input type="text" id="contact_name" class="form-control" placeholder="账号"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <!--<label for="contact_email">Email Address</label>-->
+                                        <input type="text" id="contact_email" class="form-control" placeholder="密码"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <!--<label for="contact_message">Message</label>-->
+                                        <textarea id="contact_message" class="form-control" rows="7"
+                                                  placeholder="对不起！该页面暂时没有完工"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Send</button>
+                                </form>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <div class="row margin-top-20">
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  pull-right">
+                            <a onclick="reload()" style="cursor: pointer;" class="change-section">
+                                <div class="black-bg btn-menu">
+                                    <h2>
+                                        <span id="string_returnMain4"></span>
+                                    </h2>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </section><!-- /.contact-section -->
+                <section id="company-intro-section" class="inactive">
+                    <div class="row">
+                        <div class="black-bg col-sm-12 col-md-12 col-lg-12">
+                            <h2 class="text-center">微简历</h2>
+                            <div class="col-sm-12 col-md-12">
+                                <p>
+                                    <a href="#">动画版简历</a>
+                                </p>
+                                <p>
+                                    <a href="#">标准打印版简历</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row margin-top-20">
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  pull-right">
+                            <a onclick="reload()" style="cursor: pointer;" class="change-section">
+                                <div class="black-bg btn-menu">
+                                    <h2>
+                                        <span id="string_returnMain5"></span>
+                                    </h2>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <section id="testimonials-section" class="inactive">
+                    <div class="row">
+                        <div class="black-bg col-sm-12 col-md-12 col-lg-12">
+                            <h2 class="text-center">资源文件夹</h2>
+                            <div class="col-sm-12 col-md-12">
+                                <p>
+                                    第一行：内容-无
+                                </p>
+                                <p>
+                                    第二行：内容-无
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row margin-top-20">
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  pull-right">
+                            <a onclick="reload()" style="cursor: pointer;" class="change-section">
+                                <div class="black-bg btn-menu">
+                                    <h2>
+                                        <span id="string_returnMain6"></span>
+                                    </h2>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </section>
             </div>
-
-		</div>
-        
-        <div id="preloader">
-            <div id="status">&nbsp;</div>
         </div>
-        
-        <script src="js/jquery.min.js"></script>
-        <script src="js/jquery-ui.min.js"></script>
-        <script src="js/jquery.backstretch.min.js"></script>
-        <script src="js/templatemo_script.js"></script>
-        <script src="js/jquery.i18n.properties.js"></script> 
-        <script src="js/jquery.json.min.js"></script> 
-        <script type="application/javascript">
-        	
-        	
-        	function reload(){
-        		window.location.reload()
-        	}
-        	
-        	
-    	var LANGUAGE_CODE = "en_US"; //标识语言
-/*国际化配置信息*/
-function loadProperties(type) {
-    jQuery.i18n.properties({
-        name: 'strings', // 资源文件名称
-        path: 'properties', // 资源文件所在目录路径
-        mode: 'map', // 模式：变量或 Map 
-        language: type, // 对应的语言
-        cache: false,
-        encoding: 'UTF-8',
-        callback: function () { // 回调方法
-        	//左下 右下
-            $('#sl').html($.i18n.prop('string_sl'))
-            $('#string_version').html($.i18n.prop('string_version'))
-            $('#string_RecordNum').html($.i18n.prop('string_RecordNum'))
-            $('#skillBy').html($.i18n.prop('string_skillBy'))
-            $('#webSite').html($.i18n.prop('string_webSite'))
-            $('#anyongliang').html($.i18n.prop('string_anyongliang'))
-            $('#switch').html($.i18n.prop('string_switch'))
-            $('#string_loginName').html($.i18n.prop('string_loginName'))
-            $('#string_loginState').html($.i18n.prop('string_loginState'))
-            //主页目录
-            $('#skillBolg').html($.i18n.prop('string_skillBolg'))
-            $('#string_Sharing').html($.i18n.prop('string_Sharing'))
-            $('#string_Login').html($.i18n.prop('string_Login'))
-            $('#resume').html($.i18n.prop('string_resume'))
-            $('#aboutMe').html($.i18n.prop('string_aboutMe'))
-            $('#resourceFolder').html($.i18n.prop('string_resourceFolder'))
-            //主页标题
-            $('#string_h1').html($.i18n.prop('string_h1'))
-            $('#string_h2_1').html($.i18n.prop('string_h2_1'))
-            $('#string_h2_2').html($.i18n.prop('string_h2_2'))
-            $('#string_Tit').html($.i18n.prop('string_Tit'))
-            $('#string_loginInsert').html($.i18n.prop('string_loginInsert'))
-            //次级页面返回按钮
-            $('#string_returnMain1').html($.i18n.prop('string_returnMain1'))
-            $('#string_returnMain2').html($.i18n.prop('string_returnMain2'))
-            $('#string_returnMain3').html($.i18n.prop('string_returnMain3'))
-            $('#string_returnMain4').html($.i18n.prop('string_returnMain4'))
-            $('#string_returnMain5').html($.i18n.prop('string_returnMain5'))
-            $('#string_returnMain6').html($.i18n.prop('string_returnMain6'))
-            
-        }
-    });
-}
-function switchLang() {
-    LANGUAGE_CODE = LANGUAGE_CODE == 'zh_CN' ? 'en_US' : 'zh_CN';
-    loadProperties(LANGUAGE_CODE);
-}
+    </div>
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footer" style="width: 340px;">
+            <p class="footer-text">
+                @ <span id="skillBy"></span>:&nbsp;<span id="anyongliang"></span><br/>
+                @ <span id="webSite"></span>:&nbsp;<span onclick="doError()" id="string_Tit"
+                                                         style="cursor: pointer;color: yellow;"></span><br/>
+                @ <span id="sl"></span>&nbsp;<span id="switch" onclick="switchLang()"
+                                                   style="cursor:pointer; color: yellow;" ;></span><br/>
+                @ <span id="string_version"></span>:&nbsp;1.0.0.1<span onclick="doError()" id="string_Tit"
+                                                                       style="cursor: pointer;color: yellow;"></span><br/>
+                @ <span id="string_RecordNum"></span>:&nbsp;京ICP备18058338号
+            </p>
+        </div>
+    </div>
+</div>
+<div id="preloader">
+    <div id="status">&nbsp;</div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.backstretch.min.js"></script>
+<script src="js/templatemo_script.js"></script>
+<script src="js/jquery.i18n.properties.js"></script>
+<script src="js/jquery.json.min.js"></script>
+<script type="application/javascript">
 
-$(document).ready(function () {
-    LANGUAGE_CODE = jQuery.i18n.normaliseLanguageCode({}); //获取浏览器的语言     
-    loadProperties(LANGUAGE_CODE);
-})
+    function reload() {
+        window.location.reload()
+    }
 
-/*/鼠标点击特效/*/
-onload = function() {
-    var click_cnt = 0;
-    var $html = document.getElementsByTagName("html")[0];
-    var $body = document.getElementsByTagName("body")[0];
-    $html.onclick = function(e) {
-        var $elem = document.createElement("b");
-        $elem.style.color = "#E94F06";
-        $elem.style.zIndex = 9999;
-        $elem.style.position = "absolute";
-        $elem.style.select = "none";
-        var x = e.pageX;
-        var y = e.pageY;
-        $elem.style.left = (x - 10) + "px";
-        $elem.style.top = (y - 20) + "px";
-        clearInterval(anim);
-        switch (++click_cnt) {
-            case 10:
-                $elem.innerText = "OωO";
-                break;
-            case 20:
-                $elem.innerText = "(๑•́ ∀ •̀๑)";
-                break;
-            case 30:
-                $elem.innerText = "(๑•́ ₃ •̀๑)";
-                break;
-            case 40:
-                $elem.innerText = "(๑•̀_•́๑)";
-                break;
-            case 50:
-                $elem.innerText = "（￣へ￣）";
-                break;
-            case 60:
-                $elem.innerText = "(╯°口°)╯(┴—┴";
-                break;
-            case 70:
-                $elem.innerText = "૮( ᵒ̌皿ᵒ̌ )ა";
-                break;
-            case 80:
-                $elem.innerText = "╮(｡>口<｡)╭";
-                break;
-            case 90:
-                $elem.innerText = "( ง ᵒ̌皿ᵒ̌)ง⁼³₌₃";
-                break;
-            case 100:
-            case 101:
-            case 102:
-            case 103:
-            case 104:
-            case 105:
-                $elem.innerText = "(ꐦ°᷄д°᷅)你厉害！";
-                break;
-            default:
-                $elem.innerText = "★";
-                break;
-        }
-        $elem.style.fontSize = Math.random() * 10 + 8 + "px";
-        var increase = 0;
-        var anim;
-        setTimeout(function() {
-            anim = setInterval(function() {
-                if (++increase == 150) {
-                    clearInterval(anim);
-                    $body.removeChild($elem);
-                }
-                $elem.style.top = y - 20 - increase + "px";
-                $elem.style.opacity = (150 - increase) / 120;
-            }, 8);
-        }, 70);
-        $body.appendChild($elem);
+    var LANGUAGE_CODE = "en_US"; //标识语言
+    /*国际化配置信息*/
+    function loadProperties(type) {
+        jQuery.i18n.properties({
+            name: 'strings', // 资源文件名称
+            path: 'properties', // 资源文件所在目录路径
+            mode: 'map', // 模式：变量或 Map
+            language: type, // 对应的语言
+            cache: false,
+            encoding: 'UTF-8',
+            callback: function () { // 回调方法
+                //左下 右下
+                $('#sl').html($.i18n.prop('string_sl'))
+                $('#string_version').html($.i18n.prop('string_version'))
+                $('#string_RecordNum').html($.i18n.prop('string_RecordNum'))
+                $('#skillBy').html($.i18n.prop('string_skillBy'))
+                $('#webSite').html($.i18n.prop('string_webSite'))
+                $('#anyongliang').html($.i18n.prop('string_anyongliang'))
+                $('#switch').html($.i18n.prop('string_switch'))
+                $('#string_loginName').html($.i18n.prop('string_loginName'))
+                $('#string_loginState').html($.i18n.prop('string_loginState'))
+                //主页目录
+                $('#skillBolg').html($.i18n.prop('string_skillBolg'))
+                $('#string_Sharing').html($.i18n.prop('string_Sharing'))
+                $('#string_Login').html($.i18n.prop('string_Login'))
+                $('#resume').html($.i18n.prop('string_resume'))
+                $('#aboutMe').html($.i18n.prop('string_aboutMe'))
+                $('#resourceFolder').html($.i18n.prop('string_resourceFolder'))
+                //主页标题
+                $('#string_h1').html($.i18n.prop('string_h1'))
+                $('#string_h2_1').html($.i18n.prop('string_h2_1'))
+                $('#string_h2_2').html($.i18n.prop('string_h2_2'))
+                $('#string_Tit').html($.i18n.prop('string_Tit'))
+                $('#string_loginInsert').html($.i18n.prop('string_loginInsert'))
+                //次级页面返回按钮
+                $('#string_returnMain1').html($.i18n.prop('string_returnMain1'))
+                $('#string_returnMain2').html($.i18n.prop('string_returnMain2'))
+                $('#string_returnMain3').html($.i18n.prop('string_returnMain3'))
+                $('#string_returnMain4').html($.i18n.prop('string_returnMain4'))
+                $('#string_returnMain5').html($.i18n.prop('string_returnMain5'))
+                $('#string_returnMain6').html($.i18n.prop('string_returnMain6'))
+            }
+        });
+    }
+
+    function switchLang() {
+        LANGUAGE_CODE = LANGUAGE_CODE == 'zh_CN' ? 'en_US' : 'zh_CN';
+        loadProperties(LANGUAGE_CODE);
+    }
+
+    $(document).ready(function () {
+        LANGUAGE_CODE = jQuery.i18n.normaliseLanguageCode({}); //获取浏览器的语言
+        loadProperties(LANGUAGE_CODE);
+    })
+
+    /*/鼠标点击特效/*/
+    onload = function () {
+        var click_cnt = 0;
+        var $html = document.getElementsByTagName("html")[0];
+        var $body = document.getElementsByTagName("body")[0];
+        $html.onclick = function (e) {
+            var $elem = document.createElement("b");
+            $elem.style.color = "#E94F06";
+            $elem.style.zIndex = 9999;
+            $elem.style.position = "absolute";
+            $elem.style.select = "none";
+            var x = e.pageX;
+            var y = e.pageY;
+            $elem.style.left = (x - 10) + "px";
+            $elem.style.top = (y - 20) + "px";
+            clearInterval(anim);
+            switch (++click_cnt) {
+                case 10:
+                    $elem.innerText = "OωO";
+                    break;
+                case 20:
+                    $elem.innerText = "(๑•́ ∀ •̀๑)";
+                    break;
+                case 30:
+                    $elem.innerText = "(๑•́ ₃ •̀๑)";
+                    break;
+                case 40:
+                    $elem.innerText = "(๑•̀_•́๑)";
+                    break;
+                case 50:
+                    $elem.innerText = "（￣へ￣）";
+                    break;
+                case 60:
+                    $elem.innerText = "(╯°口°)╯(┴—┴";
+                    break;
+                case 70:
+                    $elem.innerText = "૮( ᵒ̌皿ᵒ̌ )ა";
+                    break;
+                case 80:
+                    $elem.innerText = "╮(｡>口<｡)╭";
+                    break;
+                case 90:
+                    $elem.innerText = "( ง ᵒ̌皿ᵒ̌)ง⁼³₌₃";
+                    break;
+                case 100:
+                case 101:
+                case 102:
+                case 103:
+                case 104:
+                case 105:
+                    $elem.innerText = "(ꐦ°᷄д°᷅)你厉害！";
+                    break;
+                default:
+                    $elem.innerText = "★";
+                    break;
+            }
+            $elem.style.fontSize = Math.random() * 10 + 8 + "px";
+            var increase = 0;
+            var anim;
+            setTimeout(function () {
+                anim = setInterval(function () {
+                    if (++increase == 150) {
+                        clearInterval(anim);
+                        $body.removeChild($elem);
+                    }
+                    $elem.style.top = y - 20 - increase + "px";
+                    $elem.style.opacity = (150 - increase) / 120;
+                }, 8);
+            }, 70);
+            $body.appendChild($elem);
+        };
     };
-};
 
-function doLogin(){
-	window.location.href="login/login.html";
-}
+    function doLogin() {
+        window.location.href = "login/login.html";
+    }
 
-function doError(){
-	window.location.href="/Error";
-}
-    </script>  
-    </body> 
+    function doError() {
+        window.location.href = "/Error";
+    }
+</script>
+</body>
 </html>
