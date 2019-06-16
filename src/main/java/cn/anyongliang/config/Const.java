@@ -10,7 +10,7 @@ public class Const {
      * Redis-pool
      * Redisson-pool
      */
-    public static String RedisHost = "16.16.11.1";
+    public static String RedisHost = "127.0.0.1";
     public static int RedisPort = 6379;
     public static int RedisTimeOut = 10000;
     public static String RedisAuth = "";
@@ -20,11 +20,11 @@ public class Const {
      * jdbc-mysql/MariaDB
      */
     public static String JdbcDriver = "com.mysql.cj.jdbc.Driver";
-    public static String JdbcHost = "16.16.11.2";
+    public static String JdbcHost = "127.0.0.1";
     public static String JdbcPort = "3306";
     public static String JdbcUser = "root";
-    public static String JdbcDBName = "file";
-    public static String JdbcPassword = "123456";
+    public static String JdbcDBName = "blog";
+    public static String JdbcPassword = "1234";
     public static String SPACE = " ";
 
     /**
