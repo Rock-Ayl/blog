@@ -1,16 +1,18 @@
+var host = "http://www.anyongliang.cn";
+
 //home跳转
 function doMain() {
-    window.location.href = "http://127.0.0.1:8080/Page/Index";
+    window.location.href = host + "/Page/Index";
 }
 
 //错误跳转
 function doError() {
-    window.location.href = "http://127.0.0.1:8080/Page/Error";
+    window.location.href = host + "/Page/Error";
 }
 
 //登录跳转
 function doLogin() {
-    window.location.href = "http://127.0.0.1:8080/Page/UserLogin";
+    window.location.href = host + "/Page/UserLogin";
 }
 
 //刷新页面

@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class PageController {
 
-    @RequestMapping(value = "/Index", method = RequestMethod.GET)
+    @RequestMapping(value = "/Index")
     public String getIndex() {
         return "/Page/index/index";
     }
