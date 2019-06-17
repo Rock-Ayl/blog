@@ -26,7 +26,7 @@ public class UserUtil {
      * 失效时间：登录后30分钟
      *
      * @param cookieId
-     * @return
+     * @return true:有效  false:失效
      */
     public static boolean validateCookieId(String cookieId) {
         JsonObject user = Redis.user.getObject(cookieId);

@@ -11,16 +11,32 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.servlet.http.HttpServletRequest;
 
 
+/**
+ * 用户服务
+ */
 @RestController
 @RequestMapping(value = "UserService")
 public class UserService {
 
+    /**
+     * 获取一个新的cookieId
+     *
+     * @return
+     */
     @RequestMapping(value = "GetCookieId")
     public JsonObject getCookieId() {
         //获得一个唯一性的cookieId
         return JsonObject.Success().append("cookieId", StringUtil.newId());
     }
 
+    /**
+     * 输入用户名,密码,然后登录
+     *
+     * @param request
+     * @param userName
+     * @param password
+     * @return
+     */
     @RequestMapping(value = "Login", headers = "cookieId")
     public JsonObject login(HttpServletRequest request, String userName, String password) {
         //判空
