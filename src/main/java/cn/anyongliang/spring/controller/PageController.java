@@ -17,6 +17,11 @@ public class PageController {
         return "/Page/index/index";
     }
 
+    @RequestMapping(value = "/Resume")
+    public String getResume() {
+        return "/Page/resume/index";
+    }
+
     @RequestMapping(value = "/UserLogin")
     public String getUserLogin() {
         return "/Page/login/login";

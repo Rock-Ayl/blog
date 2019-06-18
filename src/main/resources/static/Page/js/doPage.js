@@ -15,6 +15,11 @@ function doLogin() {
     window.location.href = host + "/Page/UserLogin";
 }
 
+//简历
+function doResume() {
+    window.location.href = host + "/Page/Resume";
+}
+
 //刷新页面
 function reload() {
     window.location.reload()
