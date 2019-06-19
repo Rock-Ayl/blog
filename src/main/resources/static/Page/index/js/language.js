@@ -45,6 +45,7 @@ function loadProperties(type) {
             $('#string_commintsBuilding').html($.i18n.prop('string_commintsBuilding'))
             $('#string_aboutMe2').html($.i18n.prop('string_aboutMe2'))
             $('#string_ResumeOnline').html($.i18n.prop('string_ResumeOnline'))
+            $('#string_ResumeDownload').html($.i18n.prop('string_ResumeDownload'))
         }
     });
 }
