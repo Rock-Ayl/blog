@@ -178,22 +178,21 @@
                                     </h2>
                                     <form action="#" method="post">
                                         <div class="form-group col-sm-6 col-md-6 col-lg-6 ">
-                                            <!--<label for="contact_name">Name</label>-->
-                                            <input type="text" id="contact_name" class="form-control"
+                                            <input type="text" id="commentEmail" class="form-control"
                                                    placeholder="邮箱"/>
                                         </div>
                                         <div class="form-group col-sm-6 col-md-6 col-lg-6 ">
-                                            <!--<label for="contact_email">Email Address</label>-->
-                                            <input type="text" id="contact_email" class="form-control"
+                                            <input type="text" id="commentName" class="form-control"
                                                    placeholder="昵称"/>
                                         </div>
                                         <div class="form-group col-sm-12 col-md-12 col-lg-12 ">
-                                            <!--<label for="contact_message">Message</label>-->
-                                            <textarea id="contact_message" class="form-control" rows="7"
+                                            <textarea id="commentInfo" class="form-control" rows="7"
                                                       placeholder="写点神马吧OVO"></textarea>
                                         </div>
                                         <div class="form-group col-sm-12 col-md-12 col-lg-12 ">
-                                            <button type="submit" class="btn btn-primary ">Send</button>
+                                            <button type="button" onclick="writeComment()" class="btn btn-primary ">
+                                                Send
+                                            </button>
                                         </div>
                                     </form>
                                 </div>
@@ -289,16 +288,13 @@
                             <div class="col-sm-6 col-md-6 margin-bottom-20">
                                 <form action="#" method="post">
                                     <div class="form-group">
-                                        <!--<label for="contact_name">Name</label>-->
-                                        <input type="text" id="contact_name" class="form-control" placeholder="账号"/>
+                                        <input type="text" id="contact_name2" class="form-control" placeholder="账号"/>
                                     </div>
                                     <div class="form-group">
-                                        <!--<label for="contact_email">Email Address</label>-->
-                                        <input type="text" id="contact_email" class="form-control" placeholder="密码"/>
+                                        <input type="text" id="contact_email2" class="form-control" placeholder="密码"/>
                                     </div>
                                     <div class="form-group">
-                                        <!--<label for="contact_message">Message</label>-->
-                                        <textarea id="contact_message" class="form-control" rows="7"
+                                        <textarea id="contact_message2" class="form-control" rows="7"
                                                   placeholder="对不起！该页面暂时没有完工"></textarea>
                                     </div>
                                     <button type="submit" class="btn btn-primary">Send</button>
@@ -394,5 +390,24 @@
 <div id="preloader">
     <div id="status">&nbsp;</div>
 </div>
+
+<script type="text/javascript">
+    //写入评论
+    function writeComment() {
+        var commentEmail = document.getElementById("commentEmail").value;
+        var commentName = document.getElementById("commentName").value;
+        var commentInfo = document.getElementById("commentInfo").value;
+        $.ajax({
+            type: "post",
+            url: "/CommentService/WriteComment",
+            data: {commentInfo: commentInfo, commentName: commentName, commentEmail: commentEmail},
+            success: function (data) {
+                alert(data.message)
+            }
+        });
+    }
+
+</script>
+
 </body>
 </html>

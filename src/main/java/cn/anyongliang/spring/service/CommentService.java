@@ -29,7 +29,7 @@ public class CommentService {
      * @return
      */
     @RequestMapping(value = "WriteComment")
-    public JsonObject writeComment(HttpServletRequest request, String content) {
+    public JsonObject writeComment(HttpServletRequest request, String commentEmail, String commentName, String commentInfo) {
         //获取cookieId
         String cookieId = UserUtil.getUserCookieId(request);
         //验证身份
@@ -38,7 +38,7 @@ public class CommentService {
         } else {
             //todo 该逻辑为匿名的用户
         }
-        return null;
+        return JsonObject.Success("成功了");
     }
 
 }
