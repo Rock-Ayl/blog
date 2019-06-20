@@ -155,24 +155,24 @@
         // Place holder replacement
         /**
         * Tested with:
-        *   test.t1=asdf ''{0}''
-        *   test.t2=asdf '{0}' '{1}'{1}'zxcv
-        *   test.t3=This is \"a quote" 'a''{0}''s'd{fgh{ij'
-        *   test.t4="'''{'0}''" {0}{a}
-        *   test.t5="'''{0}'''" {1}
-        *   test.t6=a {1} b {0} c
-        *   test.t7=a 'quoted \\ s\ttringy' \t\t x
+        *   comment.t1=asdf ''{0}''
+        *   comment.t2=asdf '{0}' '{1}'{1}'zxcv
+        *   comment.t3=This is \"a quote" 'a''{0}''s'd{fgh{ij'
+        *   comment.t4="'''{'0}''" {0}{a}
+        *   comment.t5="'''{0}'''" {1}
+        *   comment.t6=a {1} b {0} c
+        *   comment.t7=a 'quoted \\ s\ttringy' \t\t x
         *
         * Produces:
-        *   test.t1, p1 ==> asdf 'p1'
-        *   test.t2, p1 ==> asdf {0} {1}{1}zxcv
-        *   test.t3, p1 ==> This is "a quote" a'{0}'sd{fgh{ij
-        *   test.t4, p1 ==> "'{0}'" p1{a}
-        *   test.t5, p1 ==> "'{0}'" {1}
-        *   test.t6, p1 ==> a {1} b p1 c
-        *   test.t6, p1, p2 ==> a p2 b p1 c
-        *   test.t6, p1, p2, p3 ==> a p2 b p1 c
-        *   test.t7 ==> a quoted \ s	tringy 		 x
+        *   comment.t1, p1 ==> asdf 'p1'
+        *   comment.t2, p1 ==> asdf {0} {1}{1}zxcv
+        *   comment.t3, p1 ==> This is "a quote" a'{0}'sd{fgh{ij
+        *   comment.t4, p1 ==> "'{0}'" p1{a}
+        *   comment.t5, p1 ==> "'{0}'" {1}
+        *   comment.t6, p1 ==> a {1} b p1 c
+        *   comment.t6, p1, p2 ==> a p2 b p1 c
+        *   comment.t6, p1, p2, p3 ==> a p2 b p1 c
+        *   comment.t7 ==> a quoted \ s	tringy 		 x
         */
 
         var i;
