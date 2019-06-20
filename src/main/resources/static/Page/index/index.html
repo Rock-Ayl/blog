@@ -17,6 +17,7 @@
     <script src="index/js/jquery.json.min.js"></script>
     <script type="text/javascript" src="index/js/click.js"></script>
     <script type="text/javascript" src="index/js/language.js"></script>
+    <script type="text/javascript" src="index/js/method.js"></script>
 </head>
 <body>
 
@@ -390,24 +391,5 @@
 <div id="preloader">
     <div id="status">&nbsp;</div>
 </div>
-
-<script type="text/javascript">
-    //写入评论
-    function writeComment() {
-        var commentEmail = document.getElementById("commentEmail").value;
-        var commentName = document.getElementById("commentName").value;
-        var commentInfo = document.getElementById("commentInfo").value;
-        $.ajax({
-            type: "post",
-            url: "/CommentService/WriteComment",
-            data: {commentInfo: commentInfo, commentName: commentName, commentEmail: commentEmail},
-            success: function (data) {
-                alert(data.message)
-            }
-        });
-    }
-
-</script>
-
 </body>
 </html>
