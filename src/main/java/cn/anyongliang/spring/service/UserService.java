@@ -30,6 +30,25 @@ public class UserService {
     }
 
     /**
+     * 根据用户的cookieId获取用户信息
+     *
+     * @return
+     */
+    @RequestMapping(value = "GetUserInfoByCookieId", headers = "cookieId")
+    public JsonObject getUserInfoByCookieId(HttpServletRequest request) {
+        //获取cookieId
+        String cookieId = UserUtil.getUserCookieId(request);
+        //判断是否失效
+        if (UserUtil.validateCookieId(cookieId)) {
+            //如果未失效,获取用户的信息
+            return Redis.user.getObject(cookieId).Success();
+        } else {
+            return JsonObject.Fail("登录失效或超时,请重新登录.");
+        }
+
+    }
+
+    /**
      * 输入用户名,密码,然后登录
      *
      * @param request
