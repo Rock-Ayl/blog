@@ -15,11 +15,25 @@ function writeComment() {
             $.ajax({
                 type: "post",
                 url: "/CommentService/WriteComment",
-                data: { commentInfo: commentInfo, commentName: commentName, commentEmail: commentEmail },
+                data: {commentInfo: commentInfo, commentName: commentName, commentEmail: commentEmail},
                 success: function (data) {
                     alert(data.message)
                 }
             });
         }
     }
+}
+
+//读评论
+function readComment() {
+    //post请求读评论
+    $.ajax({
+        type: "post",
+        url: "/CommentService/ReadComment",
+        data: {},
+        success: function (data) {
+            var commentList = document.getElementById("commentList");
+            commentList
+        }
+    });
 }

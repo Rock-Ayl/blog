@@ -22,380 +22,382 @@
 </head>
 
 <body>
-    <div id="main-wrapper">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center templatemo-logo margin-top-20">
-            <span id="string_loginName" style="float: right;color: white;"></span><br />
-            <span id="string_loginState" style="float: right;color: white;"></span><br />
-            <span id="string_loginInsert" style="color: yellow;cursor: pointer;float: right;"
-                onclick="doLogin()"></span>
-            <h1 class="templatemo-site-title">
-                <a href="#">
-                    <span id="string_h1"></span>
-                </a>
-            </h1>
-            <h3 class="templatemo-site-title">
-                (*/ω＼*)
-                <a href="#">
+<div id="main-wrapper">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center templatemo-logo margin-top-20">
+        <span id="string_loginName" style="float: right;color: white;"></span><br/>
+        <span id="string_loginState" style="float: right;color: white;"></span><br/>
+        <span id="string_loginInsert" style="color: yellow;cursor: pointer;float: right;"
+              onclick="doLogin()"></span>
+        <h1 class="templatemo-site-title">
+            <a href="#">
+                <span id="string_h1"></span>
+            </a>
+        </h1>
+        <h3 class="templatemo-site-title">
+            (*/ω＼*)
+            <a href="#">
                     <span class="blue">
                         <span id="string_h2_1" onclick="doError()"></span>
                     </span>
-                    <span class="green">
+                <span class="green">
                         <span id="string_h2_2" onclick="doError()"></span>
                     </span>
-                </a>
-                (～￣▽￣)～
-            </h3>
+            </a>
+            (～￣▽￣)～
+        </h3>
+    </div>
+    <div class="image-section">
+        <div class="image-container">
+            <img src="http://anyongliang.oss-cn-beijing.aliyuncs.com/blog/web/index/images/zoom-bg-1.jpg"
+                 id="menu-img" class="main-img inactive" alt="Zoom HTML5 Template by templatemo.com">
+            <img src="http://anyongliang.oss-cn-beijing.aliyuncs.com/blog/web/index/images/zoom-bg-2.jpg"
+                 id="products-img" class="inactive" alt="Product">
+            <img src="http://anyongliang.oss-cn-beijing.aliyuncs.com/blog/web/index/images/zoom-bg-3.jpg"
+                 id="services-img" class="inactive" alt="Services">
+            <img src="http://anyongliang.oss-cn-beijing.aliyuncs.com/blog/web/index/images/zoom-bg-4.jpg"
+                 id="about-img" class="inactive" alt="About">
+            <img src="http://anyongliang.oss-cn-beijing.aliyuncs.com/blog/web/index/images/zoom-bg-5.jpg"
+                 id="contact-img" class="inactive" alt="Contact">
+            <img src="http://anyongliang.oss-cn-beijing.aliyuncs.com/blog/web/index/images/zoom-bg-6.jpg"
+                 id="company-intro-img" class="main-img inactive" alt="Company Intro">
+            <img src="http://anyongliang.oss-cn-beijing.aliyuncs.com/blog/web/index/images/zoom-bg-7.jpg"
+                 id="testimonials-img" class="main-img inactive" alt="Testimonials">
         </div>
-        <div class="image-section">
-            <div class="image-container">
-                <img src="http://anyongliang.oss-cn-beijing.aliyuncs.com/blog/web/index/images/zoom-bg-1.jpg"
-                    id="menu-img" class="main-img inactive" alt="Zoom HTML5 Template by templatemo.com">
-                <img src="http://anyongliang.oss-cn-beijing.aliyuncs.com/blog/web/index/images/zoom-bg-2.jpg"
-                    id="products-img" class="inactive" alt="Product">
-                <img src="http://anyongliang.oss-cn-beijing.aliyuncs.com/blog/web/index/images/zoom-bg-3.jpg"
-                    id="services-img" class="inactive" alt="Services">
-                <img src="http://anyongliang.oss-cn-beijing.aliyuncs.com/blog/web/index/images/zoom-bg-4.jpg"
-                    id="about-img" class="inactive" alt="About">
-                <img src="http://anyongliang.oss-cn-beijing.aliyuncs.com/blog/web/index/images/zoom-bg-5.jpg"
-                    id="contact-img" class="inactive" alt="Contact">
-                <img src="http://anyongliang.oss-cn-beijing.aliyuncs.com/blog/web/index/images/zoom-bg-6.jpg"
-                    id="company-intro-img" class="main-img inactive" alt="Company Intro">
-                <img src="http://anyongliang.oss-cn-beijing.aliyuncs.com/blog/web/index/images/zoom-bg-7.jpg"
-                    id="testimonials-img" class="main-img inactive" alt="Testimonials">
-            </div>
-        </div>
-        <div class="container" style="height: 650px;">
-            <div
+    </div>
+    <div class="container" style="height: 650px;">
+        <div
                 class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 templatemo-content-wrapper">
-                <div class="templatemo-content">
-                    <section id="menu-section" class="active">
-                        <div class="row">
-                            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                <a href="#products" class="change-section">
-                                    <div class="black-bg btn-menu">
-                                        <i class="fa fa-cubes"></i>
-                                        <h2>
-                                            <span id="skillBolg"></span>
-                                        </h2>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                <a href="#services" class="change-section">
-                                    <div class="black-bg btn-menu">
-                                        <i class="fa fa-laptop"></i>
-                                        <h2>
-                                            <span id="string_Sharing"></span>
-                                        </h2>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                <a href="#about" class="change-section">
-                                    <div class="black-bg btn-menu">
-                                        <i class="fa fa-users"></i>
-                                        <h2>
-                                            <span id="aboutMe"></span>
-                                        </h2>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                <a href="#company-intro" class="change-section">
-                                    <div class="black-bg btn-menu">
-                                        <i class="fa fa-envelope"></i>
-                                        <h2>
-                                            <span id="resume"></span>
-                                        </h2>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 margin-bottom-20">
-                                <a href="#contact" class="change-section">
-                                    <div class="black-bg btn-menu">
-                                        <h2>
-                                            <span id="string_UtilOnline"></span>
-                                        </h2>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 margin-bottom-20">
-                                <a href="#testimonials" class="change-section">
-                                    <div class="black-bg btn-menu">
-                                        <h2>
-                                            <span id="resourceFolder"></span>
-                                        </h2>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </section><!-- /.menu-section -->
-                    <section id="products-section" class="inactive">
-                        <div class="row">
-                            <div class="col-sm-6 col-md-6 col-lg-6 margin-bottom-20">
-                                <div class="black-bg col-sm-12 col-md-12 col-lg-12">
+            <div class="templatemo-content">
+                <section id="menu-section" class="active">
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
+                            <a href="#products" class="change-section">
+                                <div class="black-bg btn-menu">
+                                    <i class="fa fa-cubes"></i>
                                     <h2>
-                                        <span id="string_csdnUrl"></span>
+                                        <span id="skillBolg"></span>
                                     </h2>
-                                    <p>
-                                        <a href="https://blog.csdn.net/qq_42461790">
-                                            1:个人CSDN博客地址
-                                        </a>
-                                        <br />
-                                    </p>
                                 </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-6 margin-bottom-20">
-                                <div class="black-bg col-sm-12 col-md-12 col-lg-12">
+                            </a>
+                        </div>
+                        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
+                            <a href="#services" class="change-section">
+                                <div class="black-bg btn-menu">
+                                    <i class="fa fa-laptop"></i>
                                     <h2>
-                                        <span id="string_GitHubUrl"></span>
+                                        <span id="string_Sharing"></span>
                                     </h2>
-                                    <p>
-                                        <a href="https://github.com/Rock-Ayl">
-                                            2:个人gitHub地址
-                                        </a>
-                                        <br />
-                                    </p>
                                 </div>
-                            </div>
+                            </a>
                         </div>
-                        <div class="row margin-top-20">
-                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  pull-right">
-                                <a onclick="reload()" style="cursor: pointer;" class="change-section">
-                                    <div class="black-bg btn-menu">
-                                        <h2>
-                                            <span id="string_returnMain1"></span>
-                                        </h2>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </section><!-- /.product-section -->
-                    <section id="services-section" class="inactive">
-                        <div class="row">
-                            <div class="col-sm-12 col-md-12 col-lg-12">
-                                <div class="col-sm-12 col-md-12 col-lg-12 black-bg">
-                                    <div class="col-sm-6 col-md-6 col-lg-6 margin-bottom-20">
-                                        <h2>
-                                            <span>留言板→_→</span>
-                                        </h2>
-                                        <form action="#" method="post">
-                                            <div class="form-group col-sm-6 col-md-6 col-lg-6 ">
-                                                <input type="text" id="commentEmail" class="form-control"
-                                                    placeholder="邮箱" />
-                                            </div>
-                                            <div class="form-group col-sm-6 col-md-6 col-lg-6 ">
-                                                <input type="text" id="commentName" class="form-control "
-                                                    placeholder="昵称" required />
-                                            </div>
-                                            <div class="form-group col-sm-12 col-md-12 col-lg-12 ">
-                                                <textarea id="commentInfo" class="form-control" rows="7"
-                                                    placeholder="写点神马吧OVO"></textarea>
-                                            </div>
-                                            <div class="form-group col-sm-12 col-md-12 col-lg-12 ">
-                                                <button type="button" onclick="writeComment()" class="btn btn-primary ">
-                                                    Send
-                                                </button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="col-sm-6 col-md-6 col-lg-6 margin-bottom-20">
-                                        <img
-                                            src="https://anyongliang.oss-cn-beijing.aliyuncs.com/blog/web/index/images/cat.gif">
-                                    </div>
-                                </div>
-                                <div class="col-sm-12 col-md-12 col-lg-12 black-bg">
+                        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
+                            <a href="#about" class="change-section">
+                                <div class="black-bg btn-menu">
+                                    <i class="fa fa-users"></i>
                                     <h2>
-                                        <span id="string_commintsBuilding"></span>
+                                        <span id="aboutMe"></span>
                                     </h2>
-                                    <div class="col-sm-12 col-md-12">
-                                        <p>
-                                            ---------------评论------------------
-                                        </p>
-                                    </div>
-
-                                    <div class="col-sm-6 col-md-6">
-                                        <div id="map-canvas1"></div>
-                                        <p>
-                                            ----------------End------------------
-                                        </p>
-                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
-                        <div class="row margin-top-20">
-                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  pull-right">
-                                <a onclick="reload()" style="cursor: pointer;" class="change-section">
-                                    <div class="black-bg btn-menu">
-                                        <h2>
-                                            <span id="string_returnMain2"></span>
-                                        </h2>
-                                    </div>
-                                </a>
-                            </div>
+                        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
+                            <a href="#company-intro" class="change-section">
+                                <div class="black-bg btn-menu">
+                                    <i class="fa fa-envelope"></i>
+                                    <h2>
+                                        <span id="resume"></span>
+                                    </h2>
+                                </div>
+                            </a>
                         </div>
-                    </section><!-- /.services-section -->
-                    <section id="about-section" class="inactive">
-                        <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 margin-bottom-20">
+                            <a href="#contact" class="change-section">
+                                <div class="black-bg btn-menu">
+                                    <h2>
+                                        <span id="string_UtilOnline"></span>
+                                    </h2>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 margin-bottom-20">
+                            <a href="#testimonials" class="change-section">
+                                <div class="black-bg btn-menu">
+                                    <h2>
+                                        <span id="resourceFolder"></span>
+                                    </h2>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </section><!-- /.menu-section -->
+                <section id="products-section" class="inactive">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6 col-lg-6 margin-bottom-20">
                             <div class="black-bg col-sm-12 col-md-12 col-lg-12">
-                                <h2 class="text-center">
-                                    <span id="string_aboutMe2"></span>
+                                <h2>
+                                    <span id="string_csdnUrl"></span>
                                 </h2>
-                                <div class="col-sm-6 col-md-6">
-                                    <p>
-                                        大家好，我是安永亮，新入行的小白码农，正在向大佬发展ing....
-                                    </p>
-                                    <p>
-                                        ----End----
-                                    </p>
-                                </div>
-                                <div class="col-sm-6 col-md-6">
-                                    <p>
-                                        个人发展经历：
-                                    </p>
-                                    <a style="font-size: 16px;"
-                                        href="https://blog.csdn.net/qq_42461790/article/details/84260503">
-                                        1.从开发的超级小白变成小白的故事
+                                <p>
+                                    <a href="https://blog.csdn.net/qq_42461790">
+                                        1:个人CSDN博客地址
                                     </a>
-                                    <p>
-                                        ----End----
-                                    </p>
-                                </div>
+                                    <br/>
+                                </p>
                             </div>
                         </div>
-                        <div class="row margin-top-20">
-                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  pull-right">
-                                <a onclick="reload()" style="cursor: pointer;" class="change-section">
-                                    <div class="black-bg btn-menu">
-                                        <h2>
-                                            <span id="string_returnMain3"></span>
-                                        </h2>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </section>
-                    <section id="contact-section" class="inactive">
-                        <div class="row">
+                        <div class="col-sm-6 col-md-6 col-lg-6 margin-bottom-20">
                             <div class="black-bg col-sm-12 col-md-12 col-lg-12">
-                                <h2 class="text-center">在线工具</h2>
-                                <div class="col-sm-12 col-md-12">
-                                    <p>
-                                        对不起！该页面暂时没有完工
-                                    </p>
+                                <h2>
+                                    <span id="string_GitHubUrl"></span>
+                                </h2>
+                                <p>
+                                    <a href="https://github.com/Rock-Ayl">
+                                        2:个人gitHub地址
+                                    </a>
+                                    <br/>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row margin-top-20">
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  pull-right">
+                            <a onclick="reload()" style="cursor: pointer;" class="change-section">
+                                <div class="black-bg btn-menu">
+                                    <h2>
+                                        <span id="string_returnMain1"></span>
+                                    </h2>
                                 </div>
-
-                                <div class="col-sm-6 col-md-6">
-                                    <div id="map-canvas"></div>
-                                    <p>对不起！该页面暂时没有完工</p>
-                                </div>
-                                <div class="col-sm-6 col-md-6 margin-bottom-20">
+                            </a>
+                        </div>
+                    </div>
+                </section><!-- /.product-section -->
+                <section id="services-section" class="inactive">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <div class="col-sm-12 col-md-12 col-lg-12 black-bg">
+                                <div class="col-sm-6 col-md-6 col-lg-6 margin-bottom-20">
+                                    <h2>
+                                        <span>留言板→_→</span>
+                                    </h2>
                                     <form action="#" method="post">
-                                        <div class="form-group">
-                                            <input type="text" id="contact_name2" class="form-control"
-                                                placeholder="账号" />
+                                        <div class="form-group col-sm-6 col-md-6 col-lg-6 ">
+                                            <input type="text" id="commentEmail" class="form-control"
+                                                   placeholder="邮箱"/>
                                         </div>
-                                        <div class="form-group">
-                                            <input type="text" id="contact_email2" class="form-control"
-                                                placeholder="密码" />
+                                        <div class="form-group col-sm-6 col-md-6 col-lg-6 ">
+                                            <input type="text" id="commentName" class="form-control "
+                                                   placeholder="昵称" required/>
                                         </div>
-                                        <div class="form-group">
-                                            <textarea id="contact_message2" class="form-control" rows="7"
-                                                placeholder="对不起！该页面暂时没有完工"></textarea>
+                                        <div class="form-group col-sm-12 col-md-12 col-lg-12 ">
+                                                <textarea id="commentInfo" class="form-control" rows="7"
+                                                          placeholder="写点神马吧OVO"></textarea>
                                         </div>
-                                        <button type="submit" class="btn btn-primary">Send</button>
+                                        <div class="form-group col-sm-12 col-md-12 col-lg-12 ">
+                                            <button type="button" onclick="writeComment()" class="btn btn-primary ">
+                                                Send
+                                            </button>
+                                        </div>
                                     </form>
                                 </div>
-                                <div class="clearfix"></div>
+                                <div class="col-sm-6 col-md-6 col-lg-6 margin-bottom-20">
+                                    <img
+                                            src="https://anyongliang.oss-cn-beijing.aliyuncs.com/blog/web/index/images/cat.gif">
+                                </div>
                             </div>
-                        </div>
-                        <div class="row margin-top-20">
-                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  pull-right">
-                                <a onclick="reload()" style="cursor: pointer;" class="change-section">
-                                    <div class="black-bg btn-menu">
-                                        <h2>
-                                            <span id="string_returnMain4"></span>
-                                        </h2>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </section><!-- /.contact-section -->
-                    <section id="company-intro-section" class="inactive">
-                        <div class="row">
-                            <div class="black-bg col-sm-12 col-md-12 col-lg-12">
-                                <h2 class="text-center">微简历</h2>
+                            <div class="col-sm-12 col-md-12 col-lg-12 black-bg">
+                                <h2>
+                                    <span id="string_commintsBuilding"></span>
+                                </h2>
                                 <div class="col-sm-12 col-md-12">
                                     <p>
+                                        ---------------评论------------------
+                                    </p>
+                                </div>
+                                <!--评论加载的div-->
+                                <div id="commentList">
+                                </div>
+                                <div class="col-sm-6 col-md-6">
+                                    <div id="map-canvas1"></div>
+                                    <p>
+                                        ----------------End------------------
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row margin-top-20">
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  pull-right">
+                            <a onclick="reload()" style="cursor: pointer;" class="change-section">
+                                <div class="black-bg btn-menu">
+                                    <h2>
+                                        <span id="string_returnMain2"></span>
+                                    </h2>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </section><!-- /.services-section -->
+                <section id="about-section" class="inactive">
+                    <div class="row">
+                        <div class="black-bg col-sm-12 col-md-12 col-lg-12">
+                            <h2 class="text-center">
+                                <span id="string_aboutMe2"></span>
+                            </h2>
+                            <div class="col-sm-6 col-md-6">
+                                <p>
+                                    大家好，我是安永亮，新入行的小白码农，正在向大佬发展ing....
+                                </p>
+                                <p>
+                                    ----End----
+                                </p>
+                            </div>
+                            <div class="col-sm-6 col-md-6">
+                                <p>
+                                    个人发展经历：
+                                </p>
+                                <a style="font-size: 16px;"
+                                   href="https://blog.csdn.net/qq_42461790/article/details/84260503">
+                                    1.从开发的超级小白变成小白的故事
+                                </a>
+                                <p>
+                                    ----End----
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row margin-top-20">
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  pull-right">
+                            <a onclick="reload()" style="cursor: pointer;" class="change-section">
+                                <div class="black-bg btn-menu">
+                                    <h2>
+                                        <span id="string_returnMain3"></span>
+                                    </h2>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <section id="contact-section" class="inactive">
+                    <div class="row">
+                        <div class="black-bg col-sm-12 col-md-12 col-lg-12">
+                            <h2 class="text-center">在线工具</h2>
+                            <div class="col-sm-12 col-md-12">
+                                <p>
+                                    对不起！该页面暂时没有完工
+                                </p>
+                            </div>
+
+                            <div class="col-sm-6 col-md-6">
+                                <div id="map-canvas"></div>
+                                <p>对不起！该页面暂时没有完工</p>
+                            </div>
+                            <div class="col-sm-6 col-md-6 margin-bottom-20">
+                                <form action="#" method="post">
+                                    <div class="form-group">
+                                        <input type="text" id="contact_name2" class="form-control"
+                                               placeholder="账号"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" id="contact_email2" class="form-control"
+                                               placeholder="密码"/>
+                                    </div>
+                                    <div class="form-group">
+                                            <textarea id="contact_message2" class="form-control" rows="7"
+                                                      placeholder="对不起！该页面暂时没有完工"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Send</button>
+                                </form>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <div class="row margin-top-20">
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  pull-right">
+                            <a onclick="reload()" style="cursor: pointer;" class="change-section">
+                                <div class="black-bg btn-menu">
+                                    <h2>
+                                        <span id="string_returnMain4"></span>
+                                    </h2>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </section><!-- /.contact-section -->
+                <section id="company-intro-section" class="inactive">
+                    <div class="row">
+                        <div class="black-bg col-sm-12 col-md-12 col-lg-12">
+                            <h2 class="text-center">微简历</h2>
+                            <div class="col-sm-12 col-md-12">
+                                <p>
                                         <span onclick="doResume()" id="string_ResumeOnline"
-                                            style="cursor: pointer;color: yellow;"></span>
-                                    </p>
-                                    <p>
+                                              style="cursor: pointer;color: yellow;"></span>
+                                </p>
+                                <p>
                                         <span onclick="doResume()" id="string_ResumeDownload"
-                                            style="cursor: pointer;color: yellow;"></span>
-                                    </p>
+                                              style="cursor: pointer;color: yellow;"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row margin-top-20">
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  pull-right">
+                            <a onclick="reload()" style="cursor: pointer;" class="change-section">
+                                <div class="black-bg btn-menu">
+                                    <h2>
+                                        <span id="string_returnMain5"></span>
+                                    </h2>
                                 </div>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <section id="testimonials-section" class="inactive">
+                    <div class="row">
+                        <div class="black-bg col-sm-12 col-md-12 col-lg-12">
+                            <h2 class="text-center">资源文件夹</h2>
+                            <div class="col-sm-12 col-md-12">
+                                <p>
+                                    第一行：内容-无
+                                </p>
+                                <p>
+                                    第二行：内容-无
+                                </p>
                             </div>
                         </div>
-                        <div class="row margin-top-20">
-                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  pull-right">
-                                <a onclick="reload()" style="cursor: pointer;" class="change-section">
-                                    <div class="black-bg btn-menu">
-                                        <h2>
-                                            <span id="string_returnMain5"></span>
-                                        </h2>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </section>
-                    <section id="testimonials-section" class="inactive">
-                        <div class="row">
-                            <div class="black-bg col-sm-12 col-md-12 col-lg-12">
-                                <h2 class="text-center">资源文件夹</h2>
-                                <div class="col-sm-12 col-md-12">
-                                    <p>
-                                        第一行：内容-无
-                                    </p>
-                                    <p>
-                                        第二行：内容-无
-                                    </p>
+                    </div>
+                    <div class="row margin-top-20">
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  pull-right">
+                            <a onclick="reload()" style="cursor: pointer;" class="change-section">
+                                <div class="black-bg btn-menu">
+                                    <h2>
+                                        <span id="string_returnMain6"></span>
+                                    </h2>
                                 </div>
-                            </div>
+                            </a>
                         </div>
-                        <div class="row margin-top-20">
-                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  pull-right">
-                                <a onclick="reload()" style="cursor: pointer;" class="change-section">
-                                    <div class="black-bg btn-menu">
-                                        <h2>
-                                            <span id="string_returnMain6"></span>
-                                        </h2>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footer" style="width: 340px;">
-                <p class="footer-text">
-                    @ <span id="skillBy"></span>:&nbsp;<span id="anyongliang"></span><br />
-                    @ <span id="webSite"></span>:&nbsp;<span onclick="doError()" id="string_Tit1"
-                        style="cursor: pointer;color: yellow;"></span><br />
-                    @ <span id="sl"></span>&nbsp;<span id="switch" onclick="switchLang()"
-                        style="cursor:pointer; color: yellow;" ;></span><br />
-                    @ <span id="string_version"></span>:&nbsp;1.0.1.8<span onclick="doError()" id="string_Tit2"
-                        style="cursor: pointer;color: yellow;"></span><br />
-                    @ <span id="string_RecordNum"></span>:&nbsp;京ICP备18058338号
-                </p>
+                    </div>
+                </section>
             </div>
         </div>
     </div>
-    <div id="preloader">
-        <div id="status">&nbsp;</div>
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footer" style="width: 340px;">
+            <p class="footer-text">
+                @ <span id="skillBy"></span>:&nbsp;<span id="anyongliang"></span><br/>
+                @ <span id="webSite"></span>:&nbsp;<span onclick="doError()" id="string_Tit1"
+                                                         style="cursor: pointer;color: yellow;"></span><br/>
+                @ <span id="sl"></span>&nbsp;<span id="switch" onclick="switchLang()"
+                                                   style="cursor:pointer; color: yellow;" ;></span><br/>
+                @ <span id="string_version"></span>:&nbsp;1.0.1.8<span onclick="doError()" id="string_Tit2"
+                                                                       style="cursor: pointer;color: yellow;"></span><br/>
+                @ <span id="string_RecordNum"></span>:&nbsp;京ICP备18058338号
+            </p>
+        </div>
     </div>
+</div>
+<div id="preloader">
+    <div id="status">&nbsp;</div>
+</div>
 </body>
 
 </html>
