@@ -33,7 +33,7 @@ function readComment() {
         data: {},
         success: function (data) {
             var commentList = document.getElementById("commentList");
-            commentList
+            commentList.innerHTML += "<div  style=\"cursor: pointer;color: yellow;\">" + new Date().getTime() + "</div>";
         }
     });
 }

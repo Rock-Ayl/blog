@@ -1,36 +1,44 @@
 
-body, html { overflow-x:hidden; }
+body, html {
+    overflow-y-x: hidden;
+}
 
 body {
     font-size: 1em;
     line-height: 1.4;
     font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-style: normal; 
+    font-style: normal;
     -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
     -webkit-text-size-adjust: 100%;
 }
 
-h1, h2, h3, h4, h5, h6, span, p { font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+h1, h2, h3, h4, h5, h6, span, p {
+    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 
-.blue { color: #6CF; }
+.blue {
+    color: #6CF;
+}
 
-.green { color: #CF0; }
+.green {
+    color: #CF0;
+}
 
 h2 {
-	padding: 10px 0;
+    padding: 10px 0;
 }
 
 p {
-	padding: 10px 0;
-	text-align: justify;
+    padding: 10px 0;
+    text-align: justify;
 }
 
 a {
-	color: #FF6;
+    color: #FF6;
 }
 
 a:hover {
-	color: #F60;
+    color: #F60;
 }
 
 hr {
@@ -45,6 +53,7 @@ hr {
 img {
     vertical-align: middle;
 }
+
 /* Preloader */
 
 #preloader {
@@ -71,30 +80,31 @@ img {
 
 /*general*/
 #main-wrapper {
-     overflow: hidden;
+    overflow-y: auto;
 }
 
 .templatemo-logo {
-	z-index: 1;
+    z-index: 1;
 }
-.templatemo-site-title { 
-    color: #fff !important; 
+
+.templatemo-site-title {
+    color: #fff !important;
     text-shadow: 0px 2px 2px rgba(0, 0, 0, 1);
 }
 
 .templatemo-site-title a {
-	color: #fff;
-	text-decoration: none;
+    color: #fff;
+    text-decoration: none;
 }
 
 .templatemo-site-title a:hover {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 
 img.slide {
-    width: 100%; 
-    z-index: -9999999; 
+    width: 100%;
+    z-index: -9999999;
     position: absolute;
 }
 
@@ -121,40 +131,51 @@ img.slide {
 
 .templatemo-content {
     position: static;
-    overflow: hidden; 
+    overflow-y: auto;
+    overflow-x: hidden;
     margin-top: 20%;
     padding-bottom: 6%;
 }
 
 .black-bg {
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
 }
+
 .black-bg:before, .black-bg:after {
     content: "";
     display: table;
     line-height: 0;
 }
+
 .black-bg:after {
     clear: both;
 }
-    .copyrights{text-indent:-9999px;height:0;line-height:0;font-size:0;overflow:hidden;}
+
+.copyrights {
+    text-indent: -9999px;
+    height: 0;
+    line-height: 0;
+    font-size: 0;
+    overflow-y: auto;
+}
+
 .templatemo-content section {
     font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    position: relative; 
-    overflow: hidden;
-    top: 0; 
+    position: relative;
+    /*overflow-y: hidden;*/
+    top: 0;
     padding-bottom: 20px;
 }
 
 
 .templatemo-content-wrapper {
-    overflow:hidden;
+    overflow-y: auto;
 }
 
 .templatemo-content h2 {
-    color:#fff;
+    color: #fff;
     font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    
+
 }
 
 .templatemo-content p {
@@ -164,19 +185,19 @@ img.slide {
 }
 
 #map-canvas {
-	height: 260px;
+    height: 260px;
 }
 
 
 .footer {
-    overflow:hidden; 
-    position:fixed; 
+    overflow-y: auto;
+    position: fixed;
     bottom: 10px;
 }
 
 .footer-text {
-    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; 
-    color:#fff; 
+    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #fff;
     text-shadow: 0px 2px 3px rgba(0, 0, 0, 1);
     margin-left: 30px;
     font-size: 14px;
@@ -199,6 +220,7 @@ img.slide {
     font-size: 50px;
     margin: 20px 0;
 }
+
 .btn-menu > h2 {
     margin: 0;
     font-size: 18px;
@@ -223,7 +245,7 @@ img.slide {
 }
 
 .change-section:hover .black-bg {
-    background-color: rgba(255,255,255,0.8);
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 .change-section:hover .black-bg > h2 {
@@ -232,12 +254,12 @@ img.slide {
 
 @media (max-width: 991px) {
     .footer {
-        overflow:hidden; 
-        position:static;
+        overflow-y: auto;
+        position: static;
         text-align: center;
     }
-    
+
     .footer-text {
-        margin-left: 0;  
+        margin-left: 0;
     }
 }
