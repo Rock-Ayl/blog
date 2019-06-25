@@ -11,7 +11,7 @@
  Target Server Version : 80013
  File Encoding         : 65001
 
- Date: 25/06/2019 10:20:02
+ Date: 25/06/2019 11:24:29
 */
 
 SET NAMES utf8mb4;
@@ -35,8 +35,8 @@ CREATE TABLE `comment` (
 -- Records of comment
 -- ----------------------------
 BEGIN;
-INSERT INTO `comment` VALUES (1, -1, '测试人员1', '自古一楼不简单', NULL, '');
-INSERT INTO `comment` VALUES (2, -1, '测试人员2', '一楼说得对', NULL, NULL);
+INSERT INTO `comment` VALUES (1, -1, '测试人员1', '自古一楼不简单', 155555555555555, '123@163.com');
+INSERT INTO `comment` VALUES (2, -1, '测试人员2', '一楼说得对', 14444444444444444, '456@163.com');
 COMMIT;
 
 -- ----------------------------
