@@ -22,7 +22,7 @@
     <script type="text/javascript">
         //页面初始化
         window.onload = function () {
-            readComment();
+            //readComment();
         }
     </script>
 </head>
@@ -214,21 +214,37 @@
                                 <h2>
                                     <span id="string_commintsBuilding"></span>
                                 </h2>
-                                <div class="col-sm-12 col-md-12">
-                                    <p>
-                                        ---------------评论------------------
-                                    </p>
-                                </div>
                                 <!--评论加载的div-->
-                                <div id="commentList">
+                                <div id="commentList" class="row margin-top-20 margin-bottom-20 ">
+                                    //这是一个组装的demo
+                                    <div class="margin-top-20">
+                                        <div class="col-sm-12 col-md-12 col-lg-12 margin-top-20 ">
+                                        <span class="label label-default"
+                                              style="color: #FFFFFF;font-size: 12px; margin: 0px 5px">用户名:ts01    </span>
+                                            <span class="label label-default"
+                                                  style="color: #FFFFFF;font-size: 12px; margin: 0px 5px">用户类型:管理员    </span>
+                                            <span class="label label-default"
+                                                  style="color: #FFFFFF;font-size: 12px; margin: 0px 5px">邮箱:ts01@qq.com    </span>
+                                        </div>
+                                        <div class="col-sm-2 col-md-2 col-lg-2 margin-top-20">
+                                            <img src="https://anyongliang.oss-cn-beijing.aliyuncs.com/blog/web/user/%E5%A4%B4%E5%83%8F%20%E7%94%B7%E5%AD%A9.png">
+                                        </div>
+                                        <div class="col-sm-7 col-md-7 col-lg-7 margin-top-20">
+                                        <span style="color: #FFFFFF;font-size: 15px;">
+                                            这是长长的一段评论..............dj卡萨帝偶家爱搜ID骄傲搜ID骄傲搜ID骄傲搜ID骄傲死的奇偶我按实际do我按实际do我按实际do我按实际都1
+                                        </span>
+                                        </div>
+                                        <div class="col-sm-3 col-md-3 col-lg-3 margin-top-20">
+                                            <span style="color: #FFFFFF;font-size: 15px;">评论时间:</span>
+                                            <br>
+                                            <span style="color: #FFFFFF;font-size: 15px;">2019-6-25-14:44:46</span>
+                                        </div>
+                                        <div class="col-sm-12 col-md-12 col-lg-12 margin-top-20"
+                                             style="border-bottom: 1px solid #FFFFFF;">
+                                            <span style="color: #ffff00;font-size: 12px;">自古一楼不简单</span>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-sm-6 col-md-6">
-                                    <div id="map-canvas1"></div>
-                                    <p>
-                                        ----------------End------------------
-                                    </p>
-                                </div>
-                                <button type="button" onclick="readComment()">测试</button>
                             </div>
                         </div>
                     </div>
