@@ -87,3 +87,22 @@ function timestampToTime(timestamp) {
     s = date.getSeconds();
     return Y + M + D + h + m + s;
 }
+
+
+/*如果没有cookie,初始化*/
+function initCookieId() {
+    //如果不存在cookieId,从服务器获取
+    if (document.cookie.indexOf("cookieId=") == -1) {
+        //post请求cookieId
+        $.ajax({
+            type: "post",
+            url: "/UserService/GetCookieId",
+            data: {},
+            success: function (data) {
+                console.log(data)
+                var cookieString = "cookieId" + "=" + data.cookieId;
+                document.cookie = cookieString;
+            }
+        });
+    }
+}
