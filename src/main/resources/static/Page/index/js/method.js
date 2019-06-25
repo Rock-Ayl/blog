@@ -32,8 +32,18 @@ function readComment() {
         url: "/CommentService/ReadComment",
         data: {},
         success: function (data) {
-            var commentList = document.getElementById("commentList");
-            commentList.innerHTML += "<div  style=\"cursor: pointer;color: yellow;\">" + new Date().getTime() + "</div>";
+            //判断请求是否成功
+            if (data.isSuccess) {
+                //成功的话,取出items,遍历,给div
+                var items = data.items;
+                //获取div并初始化
+                var commentList = document.getElementById("commentList");
+                commentList.innerHTML = null;
+                //组装评论
+                for (var i = 0; i < items.length; i++) {
+                    commentList.innerHTML += "<div  style=\"cursor: pointer;color: yellow;\">" + items[i].content + "</div>";
+                }
+            }
         }
     });
 }
