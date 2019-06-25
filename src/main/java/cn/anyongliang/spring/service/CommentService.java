@@ -20,7 +20,7 @@ public class CommentService {
      */
     @RequestMapping(value = "ReadComment")
     public JsonObject readComment() {
-        return JsonObject.Success().append("items", SqlTable.use().queryObjects("SELECT * FROM `comment` ORDER BY `timestamp` DESC", new Object[]{}));
+        return JsonObject.Success().append("items", SqlTable.use().queryObjects("SELECT a.*,b.userName as realName,b.email as realEmail,d.`name` as role FROM `comment` a LEFT JOIN `user` b ON a.userId=b.id LEFT JOIN roleBinduser c ON b.id = c.userId LEFT JOIN role d ON c.roleId = d.id ORDER BY a.`timestamp` DESC", new Object[]{}));
     }
 
     /**
