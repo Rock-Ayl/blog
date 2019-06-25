@@ -20,9 +20,7 @@ public class CommentService {
      */
     @RequestMapping(value = "ReadComment")
     public JsonObject readComment() {
-        //todo 暂时注释掉
-        //.append("items", SqlTable.use().queryObjects("SELECT * FROM `comment` ORDER BY `timestamp` DESC", new Object[]{}));
-        return JsonObject.Success();
+        return JsonObject.Success().append("items", SqlTable.use().queryObjects("SELECT * FROM `comment` ORDER BY `timestamp` DESC", new Object[]{}));
     }
 
     /**
