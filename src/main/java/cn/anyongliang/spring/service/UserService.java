@@ -85,4 +85,14 @@ public class UserService {
         return result;
     }
 
+    /**
+     * 退出登录
+     */
+    @RequestMapping(value = "LoginOut", headers = "cookieId")
+    public JsonObject loginOut(HttpServletRequest request) {
+        String cookieId = UserUtil.getUserCookieId(request);
+        Redis.user.delete(cookieId);
+        return JsonObject.Success();
+    }
+
 }
