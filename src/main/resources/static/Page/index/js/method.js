@@ -41,7 +41,16 @@ function readComment() {
                 commentList.innerHTML = null;
                 //组装评论
                 for (var i = 0; i < items.length; i++) {
-                    commentList.innerHTML += "<div  style=\"cursor: pointer;color: yellow;\">" + items[i].content + "</div>";
+                    var userId = items[i].id;
+                    var userName = items[i].userName;
+                    var content = items[i].content;
+                    var timestamp = items[i].timestamp;
+                    var email = items[i].email;
+                    commentList.innerHTML += "<div  style=\"cursor: pointer;color: yellow;\">" + userId + "</div>" +
+                        "<div  style=\"cursor: pointer;color: yellow;\">" + userName + "</div>" +
+                        "<div  style=\"cursor: pointer;color: yellow;\">" + content + "</div>" +
+                        "<div  style=\"cursor: pointer;color: yellow;\">" + timestamp + "</div>" +
+                        "<div  style=\"cursor: pointer;color: yellow;\">" + email + "</div>";
                 }
             }
         }
