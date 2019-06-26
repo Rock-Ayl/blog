@@ -25,7 +25,7 @@
             //初始化cookieId
             initCookieId();
             //刷新评论
-            readComment();
+            readComment(pageIndex, pageSize);
         }
     </script>
 </head>
@@ -249,8 +249,11 @@
                                     </div>
                                 </div>
                                 <!--评论分页和按钮-->
-                                <div>
-                                    <button class="btn btn-default">test</button>
+                                <div class="col-sm-6 col-md-6 col-lg-6 ">
+                                    <button class="btn btn-default" onclick="previousComment()">上一页</button>
+                                </div>
+                                <div class="col-sm-6 col-md-6 col-lg-6 ">
+                                    <button class="btn btn-default" onclick="nextComment()">下一页</button>
                                 </div>
                             </div>
                         </div>

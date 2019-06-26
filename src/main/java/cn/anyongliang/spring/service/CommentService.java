@@ -3,6 +3,7 @@ package cn.anyongliang.spring.service;
 import cn.anyongliang.db.jdbc.SqlTable;
 import cn.anyongliang.db.redis.Redis;
 import cn.anyongliang.json.JsonObject;
+import cn.anyongliang.json.JsonObjects;
 import cn.anyongliang.util.UserUtil;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,8 +20,10 @@ public class CommentService {
      * @return
      */
     @RequestMapping(value = "ReadComment")
-    public JsonObject readComment() {
-        return JsonObject.Success().append("items", SqlTable.use().queryObjects("SELECT a.*,b.userName as realName,b.email as realEmail,d.`name` as role FROM `comment` a LEFT JOIN `user` b ON a.userId=b.id LEFT JOIN roleBinduser c ON b.id = c.userId LEFT JOIN role d ON c.roleId = d.id ORDER BY a.`timestamp` DESC", new Object[]{}));
+    public JsonObject readComment(int pageIndex, int pageSize) {
+        JsonObjects items = SqlTable.use().queryObjects("SELECT a.*,b.userName as realName,b.email as realEmail,d.`name` as role FROM `comment` a LEFT JOIN `user` b ON a.userId=b.id LEFT JOIN roleBinduser c ON b.id = c.userId LEFT JOIN role d ON c.roleId = d.id ORDER BY a.`timestamp` DESC LIMIT " + (pageIndex * pageSize - pageSize) + "," + (pageSize), new Object[]{});
+        long count = SqlTable.use().queryObject("SELECT count(*) as count FROM `comment` a LEFT JOIN `user` b ON a.userId=b.id LEFT JOIN roleBinduser c ON b.id=c.userId LEFT JOIN role d ON c.roleId=d.id ORDER BY a.`timestamp` DESC").getLong("count");
+        return JsonObject.Success().append("items", items).append("count", count);
     }
 
     /**

@@ -1,3 +1,10 @@
+//第几页
+pageIndex = 1;
+//每页几条评论
+pageSize = 10;
+//最大页码
+pageMaxIndex = 1;
+
 //写入评论
 function writeComment() {
     var commentEmail = document.getElementById("commentEmail").value;
@@ -18,7 +25,7 @@ function writeComment() {
                 data: {commentInfo: commentInfo, commentName: commentName, commentEmail: commentEmail},
                 success: function (data) {
                     //刷新评论状态
-                    readComment();
+                    readComment(pageIndex, pageSize);
                 }
             });
         }
@@ -26,12 +33,12 @@ function writeComment() {
 }
 
 //读评论
-function readComment() {
+function readComment(pageIndex, pageSize) {
     //post请求读评论
     $.ajax({
         type: "post",
         url: "/CommentService/ReadComment",
-        data: {},
+        data: {pageIndex: pageIndex, pageSize: pageSize},
         success: function (data) {
             //判断请求是否成功
             if (data.isSuccess) {
@@ -72,9 +79,32 @@ function readComment() {
                     var divString = "<div class=\"margin-top-20\"><div class=\"col-sm-12 col-md-12 col-lg-12 margin-top-20 \"><span class=\"label label-default\" style=\"color: #FFFFFF;font-size: 12px; margin: 0px 5px\">用户名:" + userName + "</span><span class=\"label label-default\" style=\"color: #FFFFFF;font-size: 12px; margin: 0px 5px\">用户类型:" + userRole + "</span><span class=\"label label-default\" style=\"color: #FFFFFF;font-size: 12px; margin: 0px 5px\">邮箱:" + email + "</span></div><div class=\"col-sm-2 col-md-2 col-lg-2 margin-top-20\"><img src=\"https://anyongliang.oss-cn-beijing.aliyuncs.com/blog/web/user/%E5%A4%B4%E5%83%8F%20%E7%94%B7%E5%AD%A9.png\"></div><div class=\"col-sm-7 col-md-7 col-lg-7 margin-top-20\"><span style=\"color: #FFFFFF;font-size: 15px;\">" + content + "</span></div><div class=\"col-sm-3 col-md-3 col-lg-3 margin-top-20\"><span style=\"color: #FFFFFF;font-size: 15px;\">评论时间:</span><br><span style=\"color: #FFFFFF;font-size: 15px;\">" + timestamp + "</span></div><div class=\"col-sm-12 col-md-12 col-lg-12 margin-top-20\"                                             style=\"border-bottom: 1px solid #FFFFFF;\"><span style=\"color: #ffff00;font-size: 12px;\">楼层:" + commentId + "</span></div></div>"
                     commentList.innerHTML += divString;
                 }
+                //设置最大页数
+                pageMaxIndex = (data.count) / pageSize;
             }
         }
     });
+}
+
+function previousComment() {
+    if (pageIndex > 1) {
+        pageIndex = pageIndex - 1;
+        readComment(pageIndex, pageSize);
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+    } else {
+        alert("到顶了！");
+    }
+}
+
+function nextComment() {
+    //判断页数是否达到最大值
+    if (pageIndex >= pageMaxIndex) {
+        alert("到底了!");
+    } else {
+        pageIndex = pageIndex + 1;
+        readComment(pageIndex, pageSize);
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+    }
 }
 
 function timestampToTime(timestamp) {
