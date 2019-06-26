@@ -5,11 +5,17 @@ pageSize = 10;
 //最大页码
 pageMaxIndex = 1;
 
+function initComment() {
+    pageIndex = 1;
+    pageSize = 10;
+    pageMaxIndex = 1;
+}
+
 //写入评论
 function writeComment() {
-    var commentEmail = document.getElementById("commentEmail").value;
-    var commentName = document.getElementById("commentName").value;
-    var commentInfo = document.getElementById("commentInfo").value;
+    var commentEmail = document.getElementById("commentEmail");
+    var commentName = document.getElementById("commentName");
+    var commentInfo = document.getElementById("commentInfo");
     //昵称判空
     if (commentName.length == 0) {
         alert("昵称不能为空!")
@@ -22,9 +28,14 @@ function writeComment() {
             $.ajax({
                 type: "post",
                 url: "/CommentService/WriteComment",
-                data: {commentInfo: commentInfo, commentName: commentName, commentEmail: commentEmail},
+                data: {commentInfo: commentInfo.value, commentName: commentName.value, commentEmail: commentEmail.value},
                 success: function (data) {
-                    //刷新评论状态
+                    commentEmail.value="";
+                    commentName.value="";
+                    commentInfo.value="";
+                    //初始化顶端
+                    initComment();
+                    //刷新
                     readComment(pageIndex, pageSize);
                 }
             });
