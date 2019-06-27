@@ -41,7 +41,7 @@ public class UserService {
         //判断是否失效
         if (UserUtil.validateCookieId(cookieId)) {
             //如果未失效,获取用户的信息
-            return Redis.user.getObject(cookieId).Success();
+            return Redis.user.getObject(cookieId).success();
         } else {
             return JsonObject.Fail("登录失效或超时,请重新登录.");
         }
@@ -66,7 +66,7 @@ public class UserService {
             return JsonObject.Fail("密码不能为null.");
         }
         //获取用户信息
-        JsonObject userObject = SqlTable.use().queryObject("select * from user where userName = ? and password = ?", new Object[]{userName, password});
+        JsonObject userObject = SqlTable.use().queryObject("select a.*,c.`name` as role from user a INNER JOIN roleBinduser b ON a.id = b.userId INNER JOIN role c ON c.id= b.roleId where a.userName = ? and a.password = ?", new Object[]{userName, password});
         if (userObject == null) {
             return JsonObject.Fail("账号密码错误.");
         }

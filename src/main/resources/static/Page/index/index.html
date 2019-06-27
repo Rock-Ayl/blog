@@ -26,6 +26,8 @@
             initCookieId();
             //刷新评论
             readComment(pageIndex, pageSize);
+            //读取用户数据
+            readUser();
         }
     </script>
 </head>
@@ -33,8 +35,12 @@
 <body>
 <div id="main-wrapper">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center templatemo-logo margin-top-20">
-        <span id="string_loginName" style="float: right;color: white;"></span><br/>
-        <span id="string_loginState" style="float: right;color: white;"></span><br/>
+        <span id="string_loginName" style="color: white;"></span>
+        <p id="userName"></p>
+        <br/>
+        <span id="string_loginState" style="color: white;"></span>
+        <p id="role"></p>
+        <br/>
         <span id="string_loginInsert" style="color: yellow;cursor: pointer;float: right;"
               onclick="doLogin()"></span>
         <h1 class="templatemo-site-title">
@@ -496,10 +502,8 @@
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footer" style="width: 340px;">
             <p class="footer-text">
                 @ <span id="skillBy"></span>:&nbsp;<span id="anyongliang"></span><br/>
-                @ <span id="webSite"></span>:&nbsp;<span onclick="doMain()" id="string_Tit1"
-                                                         style="cursor: pointer;color: yellow;"></span><br/>
-                @ <span id="sl"></span>&nbsp;<span id="switch" onclick="switchLang()"
-                                                   style="cursor:pointer; color: yellow;" ;></span><br/>
+                @ <span id="webSite"></span>:&nbsp;<span onclick="doMain()" id="string_Tit1" style="cursor: pointer;color: yellow;"></span><br/>
+                @ <span id="sl"></span>&nbsp;<span id="switch" onclick="switchLang()" style="cursor:pointer; color: yellow;" ;></span><br/>
                 @ <span id="string_version"></span>:&nbsp;1.0.4.9<br/>
                 @ <span id="string_RecordNum"></span>:&nbsp;京ICP备18058338号
             </p>

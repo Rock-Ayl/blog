@@ -28,11 +28,15 @@ function writeComment() {
             $.ajax({
                 type: "post",
                 url: "/CommentService/WriteComment",
-                data: {commentInfo: commentInfo.value, commentName: commentName.value, commentEmail: commentEmail.value},
+                data: {
+                    commentInfo: commentInfo.value,
+                    commentName: commentName.value,
+                    commentEmail: commentEmail.value
+                },
                 success: function (data) {
-                    commentEmail.value="";
-                    commentName.value="";
-                    commentInfo.value="";
+                    commentEmail.value = "";
+                    commentName.value = "";
+                    commentInfo.value = "";
                     //初始化顶端
                     initComment();
                     //刷新
@@ -97,6 +101,9 @@ function readComment(pageIndex, pageSize) {
     });
 }
 
+/**
+ * 上一页评论
+ */
 function previousComment() {
     if (pageIndex > 1) {
         pageIndex = pageIndex - 1;
@@ -107,6 +114,9 @@ function previousComment() {
     }
 }
 
+/**
+ * 下一页评论
+ */
 function nextComment() {
     //判断页数是否达到最大值
     if (pageIndex >= pageMaxIndex) {
@@ -118,6 +128,11 @@ function nextComment() {
     }
 }
 
+/**
+ * 时间戳转时间
+ * @param timestamp
+ * @returns {*}
+ */
 function timestampToTime(timestamp) {
     var date = new Date(timestamp);
     Y = date.getFullYear() + '-';
@@ -130,7 +145,9 @@ function timestampToTime(timestamp) {
 }
 
 
-/*如果没有cookie,初始化*/
+/**
+ * 如果没有cookie,初始化
+ */
 function initCookieId() {
     //如果不存在cookieId,从服务器获取
     if (document.cookie.indexOf("cookieId=") == -1) {
@@ -146,4 +163,46 @@ function initCookieId() {
             }
         });
     }
+}
+
+
+function getCookie(cookieName) {
+    var allcookies = document.cookie;
+    var cookiePos = allcookies.indexOf(cookieName); //索引的长度
+    if (cookiePos != -1) {
+        // 把cookie_pos放在值的开始，只要给值加1即可。
+        cookiePos += cookieName.length + 1;
+        var cookieEnd = allcookies.indexOf(";", cookiePos);
+
+        if (cookieEnd == -1) {
+            cookieEnd = allcookies.length;
+        }
+        var value = decodeURI(allcookies.substring(cookiePos, cookieEnd));
+    }
+    return value;
+}
+
+/**
+ * 读取用户信息
+ */
+function readUser() {
+    $.ajax({
+        type: "post",
+        url: "/UserService/GetUserInfoByCookieId",
+        data: {},
+        headers: {
+            cookieId:getCookie("cookieId")
+        },
+        success: function (data) {
+            //如果成功读取到数据,更新到菜单栏
+            if (data.isSuccess) {
+                var userName = data.userName;
+                var role = data.role;
+                console.log(userName);
+                console.log(role);
+                document.getElementById("userName").innerText=userName;
+                document.getElementById("role").innerText=role;
+            }
+        }
+    });
 }
