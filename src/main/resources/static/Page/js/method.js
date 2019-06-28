@@ -227,6 +227,9 @@ function readUser() {
                 //设置不可输入,但可以提交数据
                 document.getElementById("commentEmail").disabled = "true";
                 document.getElementById("commentName").disabled = "true";
+                //将loginOut显露,登录隐藏
+                document.getElementById("string_loginInsert").style = "display:none;";
+                document.getElementById("string_loginOut").style = "color: yellow;cursor: pointer;float: right;";
             }
         }
     });
@@ -250,6 +253,26 @@ function login() {
                 doMain();
             } else {
                 alert("登录失败!");
+            }
+        }
+    });
+}
+
+function loginOut() {
+    $.ajax({
+        type: "post",
+        url: "/UserService/LoginOut",
+        data: {},
+        headers: {
+            cookieId: getCookie("cookieId")
+        },
+        success: function (data) {
+            //如果登录成功
+            if (data.isSuccess) {
+                //跳转到主页面
+                doMain();
+            } else {
+                alert("退出失败,请刷新一下!");
             }
         }
     });

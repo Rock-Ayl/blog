@@ -33,6 +33,7 @@ function loadProperties(type) {
             $('#string_Tit').html($.i18n.prop('string_Tit'))
             $('#string_Tit1').html($.i18n.prop('string_Tit1'))
             $('#string_loginInsert').html($.i18n.prop('string_loginInsert'))
+            $('#string_loginOut').html($.i18n.prop('string_loginOut'))
             //次级页面返回按钮
             $('#string_returnMain1').html($.i18n.prop('string_returnMain1'))
             $('#string_returnMain2').html($.i18n.prop('string_returnMain2'))
