@@ -5,6 +5,9 @@ pageSize = 10;
 //最大页码
 pageMaxIndex = 1;
 
+//用户信息
+var user;
+
 function initComment() {
     pageIndex = 1;
     pageSize = 10;
@@ -33,9 +36,15 @@ function writeComment() {
                     commentName: commentName.value,
                     commentEmail: commentEmail.value
                 },
+                headers: {
+                    cookieId: getCookie("cookieId")
+                },
                 success: function (data) {
-                    commentEmail.value = "";
-                    commentName.value = "";
+                    //如果处于未登录状态
+                    if(user==null){
+                        commentEmail.value = "";
+                        commentName.value = "";
+                    }
                     commentInfo.value = "";
                     //初始化顶端
                     initComment();
@@ -196,12 +205,22 @@ function readUser() {
         success: function (data) {
             //如果成功读取到数据,更新到菜单栏
             if (data.isSuccess) {
+                //给用户信息常量赋值
+                user = data;
                 var userName = data.userName;
                 var role = data.role;
+                var email = data.email;
                 console.log(userName);
                 console.log(role);
+                //给状态赋值
                 document.getElementById("userName").innerHTML = userName;
                 document.getElementById("role").innerHTML = role;
+                //给评论赋值
+                document.getElementById("commentEmail").value = email;
+                document.getElementById("commentName").value = userName;
+                //设置不可输入,但可以提交数据
+                document.getElementById("commentEmail").disabled="true";
+                document.getElementById("commentName").disabled="true";
             }
         }
     });

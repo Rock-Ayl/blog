@@ -45,7 +45,7 @@ public class CommentService {
             //获取登录用户的信息
             JsonObject userObject = Redis.user.getObject(cookieId);
             if (userObject != null) {
-                userId = userObject.getLong("userId");
+                userId = userObject.getLong("id");
                 userName = userObject.getString("userName");
                 email = userObject.getString("email");
             } else {
