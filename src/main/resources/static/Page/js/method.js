@@ -41,7 +41,7 @@ function writeComment() {
                 },
                 success: function (data) {
                     //如果处于未登录状态
-                    if(user==null){
+                    if (user == null) {
                         commentEmail.value = "";
                         commentName.value = "";
                     }
@@ -219,8 +219,8 @@ function readUser() {
                 document.getElementById("commentEmail").value = email;
                 document.getElementById("commentName").value = userName;
                 //设置不可输入,但可以提交数据
-                document.getElementById("commentEmail").disabled="true";
-                document.getElementById("commentName").disabled="true";
+                document.getElementById("commentEmail").disabled = "true";
+                document.getElementById("commentName").disabled = "true";
             }
         }
     });

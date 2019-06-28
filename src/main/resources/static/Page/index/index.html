@@ -18,7 +18,7 @@
     <script src="index/js/jquery.json.min.js"></script>
     <script type="text/javascript" src="index/js/click.js"></script>
     <script type="text/javascript" src="index/js/language.js"></script>
-    <script type="text/javascript" src="index/js/method.js"></script>
+    <script type="text/javascript" src="js/method.js"></script>
     <script type="text/javascript">
         //页面初始化
         window.onload = function () {
@@ -26,8 +26,10 @@
             initCookieId();
             //刷新评论
             readComment(pageIndex, pageSize);
-            //读取用户数据
-            readUser();
+            //如果有cookieId,读取用户数据
+            if (getCookie("cookieId") != null) {
+                readUser();
+            }
         }
     </script>
 </head>
@@ -35,9 +37,9 @@
 <body>
 <div id="main-wrapper">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center templatemo-logo margin-top-20">
-        <div style="float:right" >
+        <div style="float:right">
             <span id="string_loginName" style="color: white;"></span>
-            <span id="userName" style="color: yellow;" ></span>
+            <span id="userName" style="color: yellow;"></span>
         </div>
         <br/>
         <div style="float:right">
@@ -506,8 +508,10 @@
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footer" style="width: 340px;">
             <p class="footer-text">
                 @ <span id="skillBy"></span>:&nbsp;<span id="anyongliang"></span><br/>
-                @ <span id="webSite"></span>:&nbsp;<span onclick="doMain()" id="string_Tit1" style="cursor: pointer;color: yellow;"></span><br/>
-                @ <span id="sl"></span>&nbsp;<span id="switch" onclick="switchLang()" style="cursor:pointer; color: yellow;" ;></span><br/>
+                @ <span id="webSite"></span>:&nbsp;<span onclick="doMain()" id="string_Tit1"
+                                                         style="cursor: pointer;color: yellow;"></span><br/>
+                @ <span id="sl"></span>&nbsp;<span id="switch" onclick="switchLang()"
+                                                   style="cursor:pointer; color: yellow;" ;></span><br/>
                 @ <span id="string_version"></span>:&nbsp;1.0.4.9<br/>
                 @ <span id="string_RecordNum"></span>:&nbsp;京ICP备18058338号
             </p>
