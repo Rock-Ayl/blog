@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="login/css/bootstrap.min.css">
     <link rel="stylesheet" href="login/css/demo.css"/>
     <link rel="stylesheet" href="login/css/templatemo-style.css">
-    <script type="text/javascript" src="js/modernizr.custom.86080.js"></script>
 </head>
 <body>
 <div id="particles-js"></div>
@@ -27,35 +26,42 @@
 <div class="container-fluid">
     <div class="row cb-slideshow-text-container ">
         <div class="tm-content col-xl-6 col-sm-8 col-xs-8 ml-auto section">
-            <header class="mb-5" style="margin: 10px 10px;"><h1>小站登录</h1></header>
+            <header class="mb-5" style="margin: 10px 10px;"><h1>小站的登录</h1></header>
             <P class="mb-5" style="margin: 10px 10px;">
-                请输入账号及密码 (*´▽｀)
+                快捷登录入口 (*´▽｀)
             </P>
-            <form action="#" method="get" class="subscribe-form" style="margin: auto auto;">
-                <div class="row form-section">
-                    <div class="col-md-7 col-sm-7 col-xs-7">
-                        <input name="username" type="text" style="margin-bottom: 25px;" class="form-control"
-                               id="contact_email" placeholder="请输入账号" required/>
-                        <input name="password" type="text" style="margin-bottom: 25px;" class="form-control"
-                               id="contact_email" placeholder="请输入密码" required/>
-                        <button type="注册" class="tm-btn-subscribe" style="margin-right: 10px;" onclick="doError()">注 册
-                        </button>
-                        <button type="登录" class="tm-btn-subscribe" style="margin-right: 10px;" onclick="doError()">登 录
-                        </button>
-                        <button type="登录" class="tm-btn-subscribe" onclick="doMain()">返 回</button>
-                    </div>
-                    <div class="col-md-5 col-sm-5 col-xs-5">
-
-                    </div>
+            <div class="row form-section">
+                <div class="col-md-9 col-sm-9 col-xs-9">
+                    <input type="text" style="margin-bottom: 25px;" class="form-control" id="email"
+                           placeholder="如果要注册,请连邮箱也要输入哦OVO" required/>
+                    <input type="text" style="margin-bottom: 25px;" class="form-control" id="userName"
+                           placeholder="请输入用户名" required/>
+                    <input type="text" style="margin-bottom: 25px;" class="form-control" id="password"
+                           placeholder="请输入密码" required/>
                 </div>
-            </form>
+                <div class="col-md-3 col-sm-3 col-xs-3"></div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                    <button class="tm-btn-subscribe " style="display:block;margin:0 auto" onclick="doError()">注 册
+                    </button>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                    <button class="tm-btn-subscribe " style="display:block;margin:0 auto" onclick="login()">登 录
+                    </button>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                    <button class="tm-btn-subscribe " style="display:block;margin:0 auto" onclick="doMain()">返 回
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
     <div class="footer-link">
     </div>
 </div>
-</body>
 <script type="text/javascript" src="login/js/particles.js"></script>
 <script type="text/javascript" src="login/js/app.js"></script>
+<script src="index/js/jquery.min.js"></script>
 <script type="text/javascript" src="js/doPage.js"></script>
+<script type="text/javascript" src="js/method.js"></script>
+</body>
 </html>

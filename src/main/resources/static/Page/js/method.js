@@ -175,6 +175,12 @@ function initCookieId() {
 }
 
 
+/**
+ * 根据cookie的key获取对应value
+ *
+ * @param cookieName
+ * @returns {string}
+ */
 function getCookie(cookieName) {
     var allcookies = document.cookie;
     var cookiePos = allcookies.indexOf(cookieName); //索引的长度
@@ -221,6 +227,29 @@ function readUser() {
                 //设置不可输入,但可以提交数据
                 document.getElementById("commentEmail").disabled = "true";
                 document.getElementById("commentName").disabled = "true";
+            }
+        }
+    });
+}
+
+function login() {
+    //获取输入的用户名+密码
+    var userName = document.getElementById("userName").value;
+    var password = document.getElementById("password").value;
+    $.ajax({
+        type: "post",
+        url: "/UserService/Login",
+        data: {userName: userName, password: password},
+        headers: {
+            cookieId: getCookie("cookieId")
+        },
+        success: function (data) {
+            //如果登录成功
+            if (data.isSuccess) {
+                //跳转到主页面
+                doMain();
+            } else {
+                alert("登录失败!");
             }
         }
     });
