@@ -191,7 +191,7 @@ function readUser() {
         url: "/UserService/GetUserInfoByCookieId",
         data: {},
         headers: {
-            cookieId:getCookie("cookieId")
+            cookieId: getCookie("cookieId")
         },
         success: function (data) {
             //如果成功读取到数据,更新到菜单栏
@@ -200,8 +200,8 @@ function readUser() {
                 var role = data.role;
                 console.log(userName);
                 console.log(role);
-                document.getElementById("userName").innerText=userName;
-                document.getElementById("role").innerText=role;
+                document.getElementById("userName").innerHTML = userName;
+                document.getElementById("role").innerHTML = role;
             }
         }
     });
