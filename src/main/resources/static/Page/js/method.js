@@ -239,23 +239,31 @@ function login() {
     //获取输入的用户名+密码
     var userName = document.getElementById("userName").value;
     var password = document.getElementById("password").value;
-    $.ajax({
-        type: "post",
-        url: "/UserService/Login",
-        data: {userName: userName, password: password},
-        headers: {
-            cookieId: getCookie("cookieId")
-        },
-        success: function (data) {
-            //如果登录成功
-            if (data.isSuccess) {
-                //跳转到主页面
-                doMain();
-            } else {
-                alert("登录失败!");
-            }
+    if (userName.length != 0) {
+        if (password != 0) {
+            $.ajax({
+                type: "post",
+                url: "/UserService/Login",
+                data: {userName: userName, password: password},
+                headers: {
+                    cookieId: getCookie("cookieId")
+                },
+                success: function (data) {
+                    //如果登录成功
+                    if (data.isSuccess) {
+                        //跳转到主页面
+                        doMain();
+                    } else {
+                        alert("登录失败,请确认用户名+密码是完全正确的!");
+                    }
+                }
+            });
+        } else {
+            alert("密码不能为空.")
         }
-    });
+    } else {
+        alert("用户名不能为空.")
+    }
 }
 
 function loginOut() {
