@@ -1,20 +1,23 @@
-//第几页
-pageIndex = 1;
-//每页几条评论
-pageSize = 10;
-//最大页码
-pageMaxIndex = 1;
+/**
+ * 变量
+ */
+pageIndex = 1; //评论第几页
+pageSize = 10; //评论每页几条
+pageMaxIndex = 1;  //评论最大页码
+var user; //登录的用户信息
 
-//用户信息
-var user;
-
+/**
+ * 初始化评论页
+ */
 function initComment() {
     pageIndex = 1;
     pageSize = 10;
     pageMaxIndex = 1;
 }
 
-//写入评论
+/**
+ * 写评论
+ */
 function writeComment() {
     var commentEmail = document.getElementById("commentEmail");
     var commentName = document.getElementById("commentName");
@@ -56,7 +59,11 @@ function writeComment() {
     }
 }
 
-//读评论
+/**
+ * 读评论
+ * @param pageIndex
+ * @param pageSize
+ */
 function readComment(pageIndex, pageSize) {
     //post请求读评论
     $.ajax({
@@ -147,7 +154,7 @@ function nextComment() {
 }
 
 /**
- * 时间戳转时间
+ * 通用方法-时间戳转时间
  * @param timestamp
  * @returns {*}
  */
@@ -185,7 +192,7 @@ function initCookieId() {
 
 
 /**
- * 根据cookie的key获取对应value
+ * 通用方法-根据cookie的key获取对应value
  *
  * @param cookieName
  * @returns {string}
@@ -302,7 +309,7 @@ function loginOut() {
 }
 
 /**
- * String 判空
+ * 通用方法-String 判空
  * @param obj
  * @returns {boolean}
  */
