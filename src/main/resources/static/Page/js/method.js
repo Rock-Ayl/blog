@@ -23,11 +23,11 @@ function writeComment() {
     var commentName = document.getElementById("commentName");
     var commentInfo = document.getElementById("commentInfo");
     //昵称判空
-    if (commentName.length == 0) {
+    if (isEmpty(commentName)) {
         alert("昵称不能为空!")
     } else {
         //content判空
-        if (commentInfo.length == 0) {
+        if (isEmpty(commentInfo)) {
             alert("请随便写点什么在提交OVO.")
         } else {
             //post请求写评论
@@ -258,8 +258,8 @@ function login() {
     //获取输入的用户名+密码
     var userName = document.getElementById("userName").value;
     var password = document.getElementById("password").value;
-    if (userName.length != 0) {
-        if (password != 0) {
+    if (!isEmpty(userName)) {
+        if (!isEmpty(password)) {
             $.ajax({
                 type: "post",
                 url: "/UserService/Login",
