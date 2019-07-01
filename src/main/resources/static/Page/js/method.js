@@ -84,6 +84,9 @@ function readComment(pageIndex, pageSize) {
                         //用用户名
                         userName = items[i].realName;
                     }
+                    if (isEmpty(userName)) {
+                        userName = "-"
+                    }
                     var content = items[i].content;
                     var timestamp = timestampToTime(items[i].timestamp);
                     var email;
@@ -94,11 +97,17 @@ function readComment(pageIndex, pageSize) {
                         //用真实的email
                         email = items[i].realEmail;
                     }
+                    if (isEmpty(email)) {
+                        email = "-"
+                    }
                     var userRole;
                     if (userId == -1) {
                         userRole = "匿名用户";
                     } else {
                         userRole = items[i].role;
+                    }
+                    if (isEmpty(userRole)) {
+                        userRole = "-"
                     }
                     var divString = "<div class=\"margin-top-20\"><div class=\"col-sm-12 col-md-12 col-lg-12 margin-top-20 \"><span class=\"label label-default\" style=\"color: #FFFFFF;font-size: 12px; margin: 0px 5px\">用户名:" + userName + "</span><span class=\"label label-default\" style=\"color: #FFFFFF;font-size: 12px; margin: 0px 5px\">用户类型:" + userRole + "</span><span class=\"label label-default\" style=\"color: #FFFFFF;font-size: 12px; margin: 0px 5px\">邮箱:" + email + "</span></div><div class=\"col-sm-2 col-md-2 col-lg-2 margin-top-20\"><img src=\"https://anyongliang.oss-cn-beijing.aliyuncs.com/blog/web/user/%E5%A4%B4%E5%83%8F%20%E7%94%B7%E5%AD%A9.png\"></div><div class=\"col-sm-7 col-md-7 col-lg-7 margin-top-20\"><span style=\"color: #FFFFFF;font-size: 15px;\">" + content + "</span></div><div class=\"col-sm-3 col-md-3 col-lg-3 margin-top-20\"><span style=\"color: #FFFFFF;font-size: 15px;\">评论时间:</span><br><span style=\"color: #FFFFFF;font-size: 15px;\">" + timestamp + "</span></div><div class=\"col-sm-12 col-md-12 col-lg-12 margin-top-20\"                                             style=\"border-bottom: 1px solid #FFFFFF;\"><span style=\"color: #ffff00;font-size: 12px;\">楼层:" + commentId + "</span></div></div>"
                     commentList.innerHTML += divString;
@@ -235,6 +244,9 @@ function readUser() {
     });
 }
 
+/**
+ * 登录
+ */
 function login() {
     //获取输入的用户名+密码
     var userName = document.getElementById("userName").value;
@@ -266,6 +278,9 @@ function login() {
     }
 }
 
+/**
+ * 退出登录
+ */
 function loginOut() {
     $.ajax({
         type: "post",
@@ -284,4 +299,17 @@ function loginOut() {
             }
         }
     });
+}
+
+/**
+ * String 判空
+ * @param obj
+ * @returns {boolean}
+ */
+function isEmpty(obj) {
+    if (typeof obj === 'undefined' || obj == null || obj === '') {
+        return true;
+    } else {
+        return false;
+    }
 }
