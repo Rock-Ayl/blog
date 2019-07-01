@@ -1,5 +1,6 @@
 package cn.anyongliang.util;
 
+import cn.anyongliang.db.jdbc.SqlTable;
 import cn.anyongliang.db.redis.Redis;
 import cn.anyongliang.json.JsonObject;
 
@@ -41,5 +42,18 @@ public class UserUtil {
             return false;
         }
         return true;
+    }
+
+    /**
+     * 单个用户与单个角色之间的绑定
+     *
+     * @return
+     */
+    public static JsonObject userBindRole(long userId, long roleId) {
+        //如果没有绑定过,绑定
+        if (SqlTable.use().queryObject("SELECT count(*) as count FROM roleBinduser WHERE userId = ? AND roleId = ?", new Object[]{userId, roleId}).getLong("count") == 0L) {
+            SqlTable.use().insert("INSERT INTO roleBinduser (userId,roleId) VALUES (?,?)", new Object[]{userId, roleId});
+        }
+        return JsonObject.Success();
     }
 }

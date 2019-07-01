@@ -94,4 +94,37 @@ public class UserService {
         return JsonObject.Success();
     }
 
+    /**
+     * 新增用户
+     *
+     * @param userName
+     * @param password
+     * @param email
+     * @return
+     */
+    @RequestMapping(value = "AddUser")
+    public JsonObject addUser(String userName, String password, String email) {
+        //todo 验证数据的有效性
+        if (StringUtil.isEmpty(userName)) {
+            return JsonObject.Fail("用户名不能为空.");
+        }
+        if (StringUtil.isEmpty(password)) {
+            return JsonObject.Fail("密码不能为空.");
+        }
+        if (StringUtil.isEmpty(email)) {
+            return JsonObject.Fail("邮箱不能为空.");
+        }
+        //新增
+        long userId = SqlTable.use().insert("INSERT INTO `user`(userName,`password`,email) VALUES (?,?,?)", new Object[]{userName, password, email});
+        //给予用户一个最基本的角色
+        JsonObject roleIdObject = SqlTable.use().queryObject("SELECT id FROM role WHERE `name` = '普通用户'");
+        if (roleIdObject != null) {
+            //获取默认的角色id
+            long roleId = roleIdObject.getLong("id");
+            //绑定
+            UserUtil.userBindRole(userId, roleId);
+        }
+        return JsonObject.Success().append("id", userId);
+    }
+
 }
