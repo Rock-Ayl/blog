@@ -252,6 +252,41 @@ function readUser() {
 }
 
 /**
+ * 注册并登陆
+ */
+function addUser() {
+    //获取输入的用户名+密码
+    var userName = document.getElementById("userName").value;
+    var password = document.getElementById("password").value;
+    var email = document.getElementById("email").value;
+    if (!isEmpty(userName)) {
+        if (!isEmpty(password)) {
+            if (!isEmpty(email)) {
+                $.ajax({
+                    type: "post",
+                    url: "/UserService/AddUser",
+                    data: {userName: userName, password: password, email: email},
+                    success: function (data) {
+                        //如果注册成功,直接登陆
+                        if (data.isSuccess) {
+                            login()
+                        } else {
+                            alert("注册失败,请检查输入的原因!");
+                        }
+                    }
+                });
+            } else {
+                alert("邮箱不能为空.");
+            }
+        } else {
+            alert("密码不能为空.");
+        }
+    } else {
+        alert("用户名不能为空.");
+    }
+}
+
+/**
  * 登录
  */
 function login() {
