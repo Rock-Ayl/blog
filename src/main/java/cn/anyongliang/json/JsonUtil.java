@@ -1,13 +1,12 @@
 package cn.anyongliang.json;
 
-import org.apache.commons.lang3.StringUtils;
 import org.bson.AbstractBsonWriter;
 import org.bson.codecs.DecoderContext;
 import org.bson.codecs.EncoderContext;
 import org.bson.json.JsonReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import cn.anyongliang.util.StringUtil;
+import cn.anyongliang.util.StringUtils;
 
 import java.io.StringWriter;
 import java.util.ArrayList;
@@ -46,14 +45,14 @@ public class JsonUtil {
 
 
     public static void copy(JsonObject oSource1, JsonObject oSource2, JsonObject oDest, String field) {
-        if (StringUtils.isEmpty(oDest.getString(field)) == false) {
+        if (org.apache.commons.lang3.StringUtils.isEmpty(oDest.getString(field)) == false) {
             return;
         }
-        if (oSource1 != null && StringUtils.isEmpty(oSource1.getString(field)) == false) {
+        if (oSource1 != null && org.apache.commons.lang3.StringUtils.isEmpty(oSource1.getString(field)) == false) {
             oDest.append(field, oSource1.getString(field));
             return;
         }
-        if (oSource2 != null && StringUtils.isEmpty(oSource2.getString(field)) == false) {
+        if (oSource2 != null && org.apache.commons.lang3.StringUtils.isEmpty(oSource2.getString(field)) == false) {
             oDest.append(field, oSource2.getString(field));
         }
     }
@@ -63,7 +62,7 @@ public class JsonUtil {
         Object value = oSource.get(sourceField);
         if (value == null)
             return;
-        if ((value instanceof String) && (StringUtils.isEmpty((String) value))) {
+        if ((value instanceof String) && (org.apache.commons.lang3.StringUtils.isEmpty((String) value))) {
             return;
         }
         oDest.put(destField, value);
@@ -80,7 +79,7 @@ public class JsonUtil {
                     buffer.append(",");
                 }
                 buffer.append(list.get(i).toString());
-            } else if (StringUtils.isEmpty(fieldName) == false && ((JsonObject) list.get(i)).containsKey(fieldName)) {
+            } else if (org.apache.commons.lang3.StringUtils.isEmpty(fieldName) == false && ((JsonObject) list.get(i)).containsKey(fieldName)) {
                 if (buffer.length() > 0) {
                     buffer.append(",");
                 }
@@ -156,7 +155,7 @@ public class JsonUtil {
             } else if (oItem instanceof JsonObject) {
                 value = ((JsonObject) oItem).getString(fieldName);
             }
-            if (StringUtils.isEmpty(value))
+            if (org.apache.commons.lang3.StringUtils.isEmpty(value))
                 continue;
             if (buf.length() > 0) {
                 buf.append(",");
@@ -169,7 +168,7 @@ public class JsonUtil {
 
     public static JsonObject parse(JsonObject obj, String fieldName) {
         String content = obj.getString(fieldName);
-        if (StringUtils.isEmpty(content)) {
+        if (org.apache.commons.lang3.StringUtils.isEmpty(content)) {
             return new JsonObject();
         }
         return parse(content);
@@ -177,7 +176,7 @@ public class JsonUtil {
 
 
     public static JsonObject parse(String content) {
-        if (StringUtil.isEmpty(content)) return new JsonObject();
+        if (StringUtils.isEmpty(content)) return new JsonObject();
         content = content.replaceAll("\n", "");
         JsonReader reader = new JsonReader(content);
         try {
@@ -191,7 +190,7 @@ public class JsonUtil {
     }
 
     public static JsonObjects parses(String content) {
-        if (StringUtil.isEmpty(content)) return new JsonObjects();
+        if (StringUtils.isEmpty(content)) return new JsonObjects();
         content = content.replaceAll("\n", "");
         JsonReader reader = new JsonReader(content);
         try {
@@ -234,7 +233,7 @@ public class JsonUtil {
     }
 
     private static <T> JsonList<T> parseList(String content) {
-        if (StringUtil.isEmpty(content)) return JsonList.create();
+        if (StringUtils.isEmpty(content)) return JsonList.create();
         content = content.replaceAll("\n", "");
         JsonReader reader = new JsonReader(content);
         try {

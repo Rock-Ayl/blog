@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by anyongliang 2019-4-30
+ * Created by Rock-Ayl 2019-4-30
  * 这个是注册并实现quartz框架的定时管理任务的class，有两种方式设置定时任务
  * <p>
  * 1:-简单的定时器实现:使用简单的时间表生成器.设定任务.每多少小时执行一次(1).次数不限;

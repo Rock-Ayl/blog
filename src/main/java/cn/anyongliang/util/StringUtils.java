@@ -5,7 +5,6 @@ import cn.anyongliang.json.JsonObject;
 import cn.anyongliang.json.JsonObjects;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.RandomUtils;
-import org.apache.commons.lang3.StringUtils;
 import org.bson.types.ObjectId;
 
 import java.io.PrintWriter;
@@ -19,7 +18,7 @@ import java.util.stream.Collectors;
 /**
  * String 工具类
  */
-public class StringUtil {
+public class StringUtils {
 
     //邮件正则
     public static final Pattern EmailPattern = Pattern.compile("^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
@@ -93,7 +92,7 @@ public class StringUtil {
     }
 
     public static String trimHostUri(String uri) {
-        if (StringUtil.isEmpty(uri)) return "";
+        if (StringUtils.isEmpty(uri)) return "";
         String c = "http";
         if (uri.startsWith(c)) {
             uri = uri.substring(c.length());
@@ -156,7 +155,7 @@ public class StringUtil {
     }
 
     public static boolean isEmpty(String v) {
-        if (StringUtils.isEmpty(v)) {
+        if (org.apache.commons.lang3.StringUtils.isEmpty(v)) {
             return true;
         }
         if (v.equalsIgnoreCase("null") || v.equalsIgnoreCase("undefined")) {
@@ -247,7 +246,7 @@ public class StringUtil {
         HashSet<String> table = new HashSet();
         for (int i = 0; i < values.length; i++) {
             String value = trim(values[i]);
-            if (StringUtil.isEmpty(value) == true) {
+            if (StringUtils.isEmpty(value) == true) {
                 continue;
             }
             if (table.contains(value)) {
@@ -283,7 +282,7 @@ public class StringUtil {
             if (values.get(i) == null)
                 continue;
             String value = trim(values.get(i).toJson());
-            if (StringUtil.isEmpty(value) == true) {
+            if (StringUtils.isEmpty(value) == true) {
                 continue;
             }
             if (table.contains(value)) {
@@ -329,7 +328,7 @@ public class StringUtil {
     public static boolean isAlphanumeric(String v) {
         for (int i = 0; i < v.length(); i++) {
             char c = v.charAt(i);
-            if (StringUtils.isAsciiPrintable(String.valueOf(c)) == false) {
+            if (org.apache.commons.lang3.StringUtils.isAsciiPrintable(String.valueOf(c)) == false) {
                 return false;
             }
         }
@@ -476,7 +475,7 @@ public class StringUtil {
             Process proc = run.exec("hostname");
             StringWriter writer = new StringWriter();
             IOUtils.copy(proc.getInputStream(), writer, "utf-8");
-            String name = StringUtil.trim(writer.toString());
+            String name = StringUtils.trim(writer.toString());
             return name;
         } catch (Exception e) {
             return "unknow";
@@ -565,7 +564,7 @@ public class StringUtil {
         String[] values = content.split(chars);
         List<String> results = new ArrayList();
         for (int i = 0; i < values.length; i++) {
-            if (StringUtil.isEmpty(values[i])) continue;
+            if (StringUtils.isEmpty(values[i])) continue;
             results.add(values[i]);
         }
         values = new String[results.size()];
@@ -575,7 +574,7 @@ public class StringUtil {
 
 
     public static String splitContent(String content, char... chars) {
-        if (StringUtils.isEmpty(content))
+        if (org.apache.commons.lang3.StringUtils.isEmpty(content))
             return "";
         StringBuilder buffer = new StringBuilder();
         for (int i = 0; i < content.length(); i++) {

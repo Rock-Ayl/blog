@@ -5,7 +5,7 @@ import org.redisson.api.RAtomicLong;
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
 import org.redisson.config.Config;
-import cn.anyongliang.util.StringUtil;
+import cn.anyongliang.util.StringUtils;
 
 /**
  * redisson-pool模式
@@ -19,7 +19,7 @@ public class Redisson {
 
     static {
         config = new Config();
-        if (StringUtil.isEmpty(Const.RedisAuth)) {
+        if (StringUtils.isEmpty(Const.RedisAuth)) {
             config.useSingleServer().setAddress("redis://" + Const.RedisHost + ":" + Const.RedisPort).setDatabase(Const.RedisDatabase);
         } else {
             config.useSingleServer().setAddress("redis://" + Const.RedisHost + ":" + Const.RedisPort).setPassword(Const.RedisAuth).setDatabase(Const.RedisDatabase);

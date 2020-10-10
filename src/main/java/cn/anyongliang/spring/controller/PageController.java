@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
  * 页面跳转控制层
- * create by anyongliang 2019-6-16
+ * create by Rock-Ayl 2019-6-16
  */
 @RequestMapping(value = "Page")
 @Controller
@@ -31,4 +31,5 @@ public class PageController {
     public String getError() {
         return "/Page/error/error";
     }
+
 }

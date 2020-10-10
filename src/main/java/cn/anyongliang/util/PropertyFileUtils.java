@@ -15,17 +15,17 @@ import java.util.function.Function;
  * 操作properties的工具类
  * create by Rock-Ayl 2019-6-13
  */
-public class PropertyFileUtil extends Properties {
+public class PropertyFileUtils extends Properties {
 
-    private static final Logger logger = LoggerFactory.getLogger(PropertyFileUtil.class);
+    private static final Logger logger = LoggerFactory.getLogger(PropertyFileUtils.class);
 
-    public PropertyFileUtil() {
+    public PropertyFileUtils() {
         defaults = new Properties();
     }
 
-    public PropertyFileUtil use(String fileName) {
+    public PropertyFileUtils use(String fileName) {
         try {
-            InputStream stream = PropertyFileUtil.class.getResourceAsStream("/" + fileName);
+            InputStream stream = PropertyFileUtils.class.getResourceAsStream("/" + fileName);
             InputStreamReader in = new InputStreamReader(stream, "UTF-8");
             defaults.load(in);
             in.close();
@@ -68,7 +68,7 @@ public class PropertyFileUtil extends Properties {
      */
     public static void main(String[] args) throws IOException {
         //获取配置文件
-        PropertyFileUtil properties = new PropertyFileUtil().use("file.properties");
+        PropertyFileUtils properties = new PropertyFileUtils().use("file.properties");
         String dataCenter = properties.getProperty("EMAILHOST");
         System.out.println(dataCenter);
         Boolean result = properties.get("EMAILHOST", Boolean::parseBoolean);

@@ -7,7 +7,7 @@ import org.apache.shiro.mgt.DefaultSecurityManager;
 import org.apache.shiro.subject.Subject;
 
 /**
- * create by anyongliang 2019-5-24
+ * create by Rock-Ayl 2019-5-24
  * shiro的核心之一
  * 所有权限的管理者
  */

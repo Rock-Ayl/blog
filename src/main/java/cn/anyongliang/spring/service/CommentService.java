@@ -4,7 +4,7 @@ import cn.anyongliang.db.jdbc.SqlTable;
 import cn.anyongliang.db.redis.Redis;
 import cn.anyongliang.json.JsonObject;
 import cn.anyongliang.json.JsonObjects;
-import cn.anyongliang.util.UserUtil;
+import cn.anyongliang.util.UserUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -39,9 +39,9 @@ public class CommentService {
         String userName = commentName;
         String email = commentEmail;
         //获取cookieId
-        String cookieId = UserUtil.getUserCookieId(request);
+        String cookieId = UserUtils.getUserCookieId(request);
         //验证身份,如果是登录用户,覆盖身份参数，如果不是，直接写入
-        if (UserUtil.validateCookieId(cookieId)) {
+        if (UserUtils.validateCookieId(cookieId)) {
             //获取登录用户的信息
             JsonObject userObject = Redis.user.getObject(cookieId);
             if (userObject != null) {

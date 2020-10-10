@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
  * create by Rock-Ayl 2019-6-16
  * 用户 工具类
  */
-public class UserUtil {
+public class UserUtils {
 
     /**
      * 获取请求过来的代表user身份的cookieId

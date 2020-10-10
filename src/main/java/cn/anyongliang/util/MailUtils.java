@@ -6,15 +6,15 @@ import javax.mail.internet.MimeMessage;
 import java.util.Properties;
 
 /**
- * created by anyongliang at 2018-12-20
+ * created by Rock-Ayl at 2018-12-20
  * <p>
  * 存放着邮件的工具类
  */
-public class MailUtil {
+public class MailUtils {
 
     /**
      * 发送邮件
-     * created by anyongliang on 2018圣诞节-夜
+     * created by Rock-Ayl on 2018圣诞节-夜
      *
      * @param email     收件人email
      * @param body      <body></body>

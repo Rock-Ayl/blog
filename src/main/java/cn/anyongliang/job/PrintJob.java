@@ -6,7 +6,7 @@ import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
 
 /**
- * Created by anyongliang 2019-5-10
+ * Created by Rock-Ayl 2019-5-10
  * 打印任务的demo
  */
 @DisallowConcurrentExecution

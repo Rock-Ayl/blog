@@ -7,9 +7,10 @@ apply plugin: 'war'
 sourceCompatibility = 1.8
 
 repositories {
-    //阿里的资源
-    maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
+    //正常Maven的镜像
     mavenCentral()
+    //阿里的镜像资源
+    maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
 }
 
 tasks.withType(JavaCompile) {
@@ -17,6 +18,7 @@ tasks.withType(JavaCompile) {
 }
 
 dependencies {
+    
     //spring-boot依赖
     compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: '2.1.5.RELEASE'
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.1.5.RELEASE'

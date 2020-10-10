@@ -13,7 +13,7 @@ import java.util.Date;
  * create by Rock-Ayl 2019-6-13
  * 取出本年，本月，本日的时间，时间戳，类型转换，精确到 00:00:00 和 23:59:59
  */
-public class TimeUtil {
+public class TimeUtils {
     /**
      * 获取本月开始日期
      *

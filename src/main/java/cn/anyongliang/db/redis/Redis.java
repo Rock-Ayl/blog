@@ -3,12 +3,11 @@ package cn.anyongliang.db.redis;
 import cn.anyongliang.config.Const;
 import cn.anyongliang.json.JsonObject;
 import cn.anyongliang.json.JsonUtil;
-import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import redis.clients.jedis.*;
-import cn.anyongliang.util.GsonUtil;
-import cn.anyongliang.util.StringUtil;
+import cn.anyongliang.util.GsonUtils;
+import cn.anyongliang.util.StringUtils;
 
 /**
  * Redis-pool模式
@@ -34,7 +33,7 @@ public class Redis {
         poolConfig.setMaxTotal(1000);
         poolConfig.setMaxIdle(100);
         poolConfig.setTestOnBorrow(true);
-        if (StringUtil.isEmpty(Const.RedisAuth)) {
+        if (StringUtils.isEmpty(Const.RedisAuth)) {
             jedisPool = new JedisPool(poolConfig, Const.RedisHost, Const.RedisPort, Const.RedisTimeOut);
         } else {
             jedisPool = new JedisPool(poolConfig, Const.RedisHost, Const.RedisPort, Const.RedisTimeOut, Const.RedisAuth);
@@ -56,7 +55,7 @@ public class Redis {
     }
 
     protected String redisKey(String id) {
-        if (StringUtils.isEmpty(name)) {
+        if (org.apache.commons.lang3.StringUtils.isEmpty(name)) {
             return id;
         } else {
             return name + "@" + id;
@@ -123,7 +122,7 @@ public class Redis {
         String key = redisKey(id);
         try {
             String content = readContent(key);
-            if (StringUtils.isEmpty(content)) {
+            if (org.apache.commons.lang3.StringUtils.isEmpty(content)) {
                 return null;
             }
             return JsonUtil.parse(content);
@@ -159,7 +158,7 @@ public class Redis {
         JsonObject oJson;
         try {
             String content = readContent(key);
-            if (!StringUtils.isEmpty(content)) {
+            if (!org.apache.commons.lang3.StringUtils.isEmpty(content)) {
                 oJson = JsonUtil.parse(content);
             } else {
                 oJson = new JsonObject();
@@ -177,12 +176,12 @@ public class Redis {
         com.google.gson.JsonObject oJson;
         try {
             String content = readContent(key);
-            if (!StringUtils.isEmpty(content)) {
-                oJson = GsonUtil.parse(content);
+            if (!org.apache.commons.lang3.StringUtils.isEmpty(content)) {
+                oJson = GsonUtils.parse(content);
             } else {
                 oJson = new com.google.gson.JsonObject();
             }
-            oJson = GsonUtil.merge(oJson, value);
+            oJson = GsonUtils.merge(oJson, value);
             update(key, oJson.toString());
         } catch (Exception e) {
             logger.error("message", e);
@@ -194,8 +193,8 @@ public class Redis {
         com.google.gson.JsonObject oJson = null;
         try {
             String content = readContent(redisKey);
-            if (!StringUtils.isEmpty(content)) {
-                oJson = GsonUtil.parse(content);
+            if (!org.apache.commons.lang3.StringUtils.isEmpty(content)) {
+                oJson = GsonUtils.parse(content);
             } else {
                 oJson = new com.google.gson.JsonObject();
             }
@@ -233,7 +232,7 @@ public class Redis {
     }
 
     public void expire(String id, int seconds) {
-        if (StringUtils.isEmpty(id)) return;
+        if (org.apache.commons.lang3.StringUtils.isEmpty(id)) return;
         String key = redisKey(id);
         try {
             if (isPoolMode) {
@@ -249,7 +248,7 @@ public class Redis {
     }
 
     public void delete(String id) {
-        if (StringUtils.isEmpty(id)) return;
+        if (org.apache.commons.lang3.StringUtils.isEmpty(id)) return;
         String key = redisKey(id);
         try {
             if (isPoolMode) {

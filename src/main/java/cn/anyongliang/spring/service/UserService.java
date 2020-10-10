@@ -3,8 +3,8 @@ package cn.anyongliang.spring.service;
 import cn.anyongliang.db.jdbc.SqlTable;
 import cn.anyongliang.db.redis.Redis;
 import cn.anyongliang.json.JsonObject;
-import cn.anyongliang.util.StringUtil;
-import cn.anyongliang.util.UserUtil;
+import cn.anyongliang.util.StringUtils;
+import cn.anyongliang.util.UserUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -25,7 +25,7 @@ public class UserService {
     @RequestMapping(value = "GetCookieId")
     public JsonObject getCookieId() {
         //获得一个唯一性的cookieId
-        return JsonObject.Success().append("cookieId", StringUtil.newId());
+        return JsonObject.Success().append("cookieId", StringUtils.newId());
     }
 
     /**
@@ -36,9 +36,9 @@ public class UserService {
     @RequestMapping(value = "GetUserInfoByCookieId", headers = "cookieId")
     public JsonObject getUserInfoByCookieId(HttpServletRequest request) {
         //获取cookieId
-        String cookieId = UserUtil.getUserCookieId(request);
+        String cookieId = UserUtils.getUserCookieId(request);
         //判断是否失效
-        if (UserUtil.validateCookieId(cookieId)) {
+        if (UserUtils.validateCookieId(cookieId)) {
             //如果未失效,获取用户的信息
             return Redis.user.getObject(cookieId).success();
         } else {
@@ -58,10 +58,10 @@ public class UserService {
     @RequestMapping(value = "Login", headers = "cookieId")
     public JsonObject login(HttpServletRequest request, String userName, String password) {
         //判空
-        if (StringUtil.isEmpty(userName)) {
+        if (StringUtils.isEmpty(userName)) {
             return JsonObject.Fail("用户名不能为null.");
         }
-        if (StringUtil.isEmpty(password)) {
+        if (StringUtils.isEmpty(password)) {
             return JsonObject.Fail("密码不能为null.");
         }
         //获取用户信息
@@ -74,7 +74,7 @@ public class UserService {
         //登录时间组装进对象中
         userObject.append("loginTime", thisTime);
         //获取用户的cookieId
-        String cookieId = UserUtil.getUserCookieId(request);
+        String cookieId = UserUtils.getUserCookieId(request);
         //将用户信息存储缓存
         Redis.user.set(cookieId, userObject.toJson());
         //组装并返回用户信息
@@ -89,7 +89,7 @@ public class UserService {
      */
     @RequestMapping(value = "LoginOut", headers = "cookieId")
     public JsonObject loginOut(HttpServletRequest request) {
-        String cookieId = UserUtil.getUserCookieId(request);
+        String cookieId = UserUtils.getUserCookieId(request);
         Redis.user.delete(cookieId);
         return JsonObject.Success();
     }
@@ -105,13 +105,13 @@ public class UserService {
     @RequestMapping(value = "AddUser")
     public JsonObject addUser(String userName, String password, String email) {
         //todo 验证数据的有效性
-        if (StringUtil.isEmpty(userName)) {
+        if (StringUtils.isEmpty(userName)) {
             return JsonObject.Fail("用户名不能为空.");
         }
-        if (StringUtil.isEmpty(password)) {
+        if (StringUtils.isEmpty(password)) {
             return JsonObject.Fail("密码不能为空.");
         }
-        if (StringUtil.isEmpty(email)) {
+        if (StringUtils.isEmpty(email)) {
             return JsonObject.Fail("邮箱不能为空.");
         }
         //新增
@@ -122,7 +122,7 @@ public class UserService {
             //获取默认的角色id
             long roleId = roleIdObject.getLong("id");
             //绑定
-            UserUtil.userBindRole(userId, roleId);
+            UserUtils.userBindRole(userId, roleId);
         }
         return JsonObject.Success().append("id", userId);
     }

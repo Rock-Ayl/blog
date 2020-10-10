@@ -6,7 +6,7 @@ import java.util.Random;
  * create by Rock-Ayl 2019-6-13
  * 生成提取码和手机短信6位验证码
  */
-public class PwdTool {
+public class PwdTools {
 
     //生成手机登录时的6位数字随机验证码 eg 859213
     public static String getMobileCode() {

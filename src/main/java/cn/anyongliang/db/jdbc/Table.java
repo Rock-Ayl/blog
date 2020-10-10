@@ -7,7 +7,7 @@ import cn.anyongliang.json.JsonObjects;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import cn.anyongliang.util.GsonUtil;
+import cn.anyongliang.util.GsonUtils;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -98,7 +98,7 @@ public class Table {
         } else if (v instanceof JsonObjects) {
             return ((JsonObjects) v).toJson();
         } else if (v instanceof List) {
-            return GsonUtil.toJson(v);
+            return GsonUtils.toJson(v);
         } else {
             return v;
         }

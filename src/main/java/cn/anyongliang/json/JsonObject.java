@@ -1,10 +1,9 @@
 package cn.anyongliang.json;
 
-import org.apache.commons.lang3.StringUtils;
 import org.bson.Document;
 import org.bson.types.ObjectId;
-import cn.anyongliang.util.GsonUtil;
-import cn.anyongliang.util.StringUtil;
+import cn.anyongliang.util.GsonUtils;
+import cn.anyongliang.util.StringUtils;
 
 import java.util.*;
 
@@ -93,7 +92,7 @@ public class JsonObject extends Document {
         for (Iterator<Map.Entry<String, Object>> i = this.entrySet().iterator(); i.hasNext(); ) {
             Map.Entry<String, Object> entry = i.next();
             JsonObject item = (JsonObject) entry.getValue();
-            if (!StringUtil.isEmpty(keyFieldName)) {
+            if (!StringUtils.isEmpty(keyFieldName)) {
                 item.append(keyFieldName, entry.getKey());
             }
             result.add(item);
@@ -117,7 +116,7 @@ public class JsonObject extends Document {
 
     public boolean isEmpty(String fieldName) {
         String v = this.getString(fieldName);
-        return StringUtil.isEmpty(v);
+        return StringUtils.isEmpty(v);
     }
 
     public JsonObject checkEmpty(String[] fields) {
@@ -135,7 +134,7 @@ public class JsonObject extends Document {
 
     public void checkEmpty(String fieldName, Object defaultValue) {
         String fieldValue = this.getString(fieldName);
-        if (StringUtils.isEmpty(fieldValue)) {
+        if (org.apache.commons.lang3.StringUtils.isEmpty(fieldValue)) {
             this.append(fieldName, defaultValue);
         }
     }
@@ -266,7 +265,7 @@ public class JsonObject extends Document {
     public String getString(String[] fields) {
         for (int i = 0; i < fields.length; i++) {
             String value = getString(fields[i]);
-            if (StringUtils.isEmpty(value)) continue;
+            if (org.apache.commons.lang3.StringUtils.isEmpty(value)) continue;
             return value;
         }
         return "";
@@ -274,7 +273,7 @@ public class JsonObject extends Document {
 
     private String valueToString(Object v) {
         if (v instanceof Object[] || v instanceof List) {
-            return GsonUtil.toJson(v);
+            return GsonUtils.toJson(v);
         }
         return v.toString();
     }
@@ -385,7 +384,7 @@ public class JsonObject extends Document {
         for (Iterator<Map.Entry<String, Object>> i = this.entrySet().iterator(); i.hasNext(); ) {
             Map.Entry<String, Object> entry = i.next();
             if ((entry.getValue() instanceof String) &&
-                    StringUtils.isEmpty(entry.getValue().toString())) {
+                    org.apache.commons.lang3.StringUtils.isEmpty(entry.getValue().toString())) {
                 fields.add(entry.getKey());
             }
         }

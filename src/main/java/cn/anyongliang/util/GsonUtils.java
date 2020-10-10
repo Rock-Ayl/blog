@@ -9,7 +9,7 @@ import java.util.Map;
  * 谷歌 工具类
  * create by Rock-Ayl 2019-6-13
  */
-public class GsonUtil {
+public class GsonUtils {
 
     public static Gson gson = new GsonBuilder().create();
     protected static JsonParser parser = new JsonParser();
