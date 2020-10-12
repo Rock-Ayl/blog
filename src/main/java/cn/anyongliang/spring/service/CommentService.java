@@ -4,12 +4,15 @@ import cn.anyongliang.db.jdbc.SqlTable;
 import cn.anyongliang.db.redis.Redis;
 import cn.anyongliang.json.JsonObject;
 import cn.anyongliang.json.JsonObjects;
-import cn.anyongliang.util.UserUtils;
+import cn.anyongliang.common.UserCommons;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 
+/**
+ * 用户评论服务
+ */
 @RestController
 @RequestMapping(value = "CommentService")
 public class CommentService {
@@ -39,21 +42,23 @@ public class CommentService {
         String userName = commentName;
         String email = commentEmail;
         //获取cookieId
-        String cookieId = UserUtils.getUserCookieId(request);
+        String cookieId = UserCommons.getUserCookieId(request);
         //验证身份,如果是登录用户,覆盖身份参数，如果不是，直接写入
-        if (UserUtils.validateCookieId(cookieId)) {
+        if (UserCommons.validateCookieId(cookieId)) {
             //获取登录用户的信息
             JsonObject userObject = Redis.user.getObject(cookieId);
+            //判空
             if (userObject != null) {
                 userId = userObject.getLong("id");
                 userName = userObject.getString("userName");
                 email = userObject.getString("email");
             } else {
-                return JsonObject.Fail("登录信息失效,请重新登录");
+                return JsonObject.Fail("登录信息失效,请重新登录.");
             }
         }
         //插入信息
         SqlTable.use().insert(" INSERT INTO `comment` (userId,userName,content,timestamp,email) VALUES (?,?,?,?,?)", new Object[]{userId, userName, commentInfo, System.currentTimeMillis(), email});
+        //返回
         return JsonObject.Success("成功了");
     }
 

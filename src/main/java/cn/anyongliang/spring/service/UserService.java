@@ -4,7 +4,7 @@ import cn.anyongliang.db.jdbc.SqlTable;
 import cn.anyongliang.db.redis.Redis;
 import cn.anyongliang.json.JsonObject;
 import cn.anyongliang.util.StringUtils;
-import cn.anyongliang.util.UserUtils;
+import cn.anyongliang.common.UserCommons;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -36,15 +36,14 @@ public class UserService {
     @RequestMapping(value = "GetUserInfoByCookieId", headers = "cookieId")
     public JsonObject getUserInfoByCookieId(HttpServletRequest request) {
         //获取cookieId
-        String cookieId = UserUtils.getUserCookieId(request);
+        String cookieId = UserCommons.getUserCookieId(request);
         //判断是否失效
-        if (UserUtils.validateCookieId(cookieId)) {
+        if (UserCommons.validateCookieId(cookieId)) {
             //如果未失效,获取用户的信息
             return Redis.user.getObject(cookieId).success();
         } else {
             return JsonObject.Fail("登录失效或超时,请重新登录.");
         }
-
     }
 
     /**
@@ -74,7 +73,7 @@ public class UserService {
         //登录时间组装进对象中
         userObject.append("loginTime", thisTime);
         //获取用户的cookieId
-        String cookieId = UserUtils.getUserCookieId(request);
+        String cookieId = UserCommons.getUserCookieId(request);
         //将用户信息存储缓存
         Redis.user.set(cookieId, userObject.toJson());
         //组装并返回用户信息
@@ -89,7 +88,7 @@ public class UserService {
      */
     @RequestMapping(value = "LoginOut", headers = "cookieId")
     public JsonObject loginOut(HttpServletRequest request) {
-        String cookieId = UserUtils.getUserCookieId(request);
+        String cookieId = UserCommons.getUserCookieId(request);
         Redis.user.delete(cookieId);
         return JsonObject.Success();
     }
@@ -122,7 +121,7 @@ public class UserService {
             //获取默认的角色id
             long roleId = roleIdObject.getLong("id");
             //绑定
-            UserUtils.userBindRole(userId, roleId);
+            UserCommons.userBindRole(userId, roleId);
         }
         return JsonObject.Success().append("id", userId);
     }

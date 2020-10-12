@@ -1,4 +1,4 @@
-package cn.anyongliang.util;
+package cn.anyongliang.common;
 
 import cn.anyongliang.db.jdbc.SqlTable;
 import cn.anyongliang.db.redis.Redis;
@@ -8,9 +8,9 @@ import javax.servlet.http.HttpServletRequest;
 
 /**
  * create by Rock-Ayl 2019-6-16
- * 用户 工具类
+ * 用户业务共有逻辑
  */
-public class UserUtils {
+public class UserCommons {
 
     /**
      * 获取请求过来的代表user身份的cookieId
@@ -31,16 +31,19 @@ public class UserUtils {
      */
     public static boolean validateCookieId(String cookieId) {
         JsonObject user = Redis.user.getObject(cookieId);
-        //不存在用户信息,失效
+        //不存在用户信息
         if (user == null) {
+            //失效
             return false;
         }
         //获取登录时间
         long loginTime = user.getLong("loginTime");
-        //登录后cookieId 30分钟后失效
+        //登录后cookieId的30分钟后
         if ((loginTime + (1 * 1000 * 60 * 30)) < System.currentTimeMillis()) {
+            //失效
             return false;
         }
+        //成功
         return true;
     }
 
@@ -52,8 +55,10 @@ public class UserUtils {
     public static JsonObject userBindRole(long userId, long roleId) {
         //如果没有绑定过,绑定
         if (SqlTable.use().queryObject("SELECT count(*) as count FROM roleBinduser WHERE userId = ? AND roleId = ?", new Object[]{userId, roleId}).getLong("count") == 0L) {
+            //绑定
             SqlTable.use().insert("INSERT INTO roleBinduser (userId,roleId) VALUES (?,?)", new Object[]{userId, roleId});
         }
+        //返回
         return JsonObject.Success();
     }
 }

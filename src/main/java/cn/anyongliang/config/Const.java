@@ -9,10 +9,10 @@ public class Const {
     /**
      * 通用connect配置
      */
-    public static String publishHost = "127.0.0.1";
+    public static String PublishHost = "127.0.0.1";
 
     /* Redis-pool,Redisson-pool */
-    public static String RedisHost = publishHost;
+    public static String RedisHost = PublishHost;
     public static int RedisPort = 6379;
     public static int RedisTimeOut = 10000;
     public static String RedisAuth = "";
@@ -20,7 +20,7 @@ public class Const {
 
     /*jdbc-mysql/MariaDB*/
     public static String JdbcDriver = "com.mysql.cj.jdbc.Driver";
-    public static String JdbcHost = publishHost;
+    public static String JdbcHost = PublishHost;
     public static String JdbcPort = "3306";
     public static String JdbcUser = "root";
     public static String JdbcDBName = "blog";
@@ -28,7 +28,7 @@ public class Const {
     public static String SPACE = " ";
 
     /*mongoDB*/
-    public static String MongoHost = publishHost;
+    public static String MongoHost = PublishHost;
     public static String MongoPort = "27017";
     public static String MongoDBName = "file";
 

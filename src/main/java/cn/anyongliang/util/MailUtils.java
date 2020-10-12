@@ -48,8 +48,7 @@ public class MailUtils {
             // Set From: 头部头字段
             message.setFrom(new InternetAddress(from));
             // Set To: 头部头字段
-            message.addRecipient(Message.RecipientType.TO,
-                    new InternetAddress(to));
+            message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
             // Set Subject: 头部头字段
             message.setSubject(userName);
             // 设置<body></body>和字符集
