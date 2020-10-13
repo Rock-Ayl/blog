@@ -37,13 +37,9 @@ public class UserCommons {
      *
      * @return
      */
-    public static JsonObject userBindRole(long userId, long roleId) {
-        //如果没有绑定过,绑定
-        if (SqlTable.use().queryObject("SELECT count(*) as count FROM roleBinduser WHERE userId = ? AND roleId = ?", new Object[]{userId, roleId}).getLong("count") == 0L) {
-            //绑定
-            SqlTable.use().insert("INSERT INTO roleBinduser (userId,roleId) VALUES (?,?)", new Object[]{userId, roleId});
-        }
-        //返回
-        return JsonObject.Success();
+    public static void userBindRole(long userId, long roleId) {
+        //如果没有插入,有就不插入
+        SqlTable.use().insert("INSERT roleBinduser (userId,roleId) SELECT ?,? FROM roleBinduser WHERE NOT EXISTS (SELECT id FROM roleBinduser WHERE userId=? AND roleId=?) LIMIT 1", new Object[]{userId, roleId, userId, roleId});
     }
+
 }

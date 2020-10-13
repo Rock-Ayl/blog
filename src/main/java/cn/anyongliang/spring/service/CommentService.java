@@ -1,6 +1,6 @@
 package cn.anyongliang.spring.service;
 
-import cn.anyongliang.common.String.StringCommons;
+import cn.anyongliang.common.StringCommons;
 import cn.anyongliang.db.jdbc.SqlTable;
 import cn.anyongliang.json.JsonObject;
 import cn.anyongliang.common.UserCommons;

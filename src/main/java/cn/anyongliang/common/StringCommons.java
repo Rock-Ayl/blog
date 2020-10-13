@@ -1,4 +1,4 @@
-package cn.anyongliang.common.String;
+package cn.anyongliang.common;
 
 import cn.anyongliang.config.Const;
 import cn.anyongliang.db.jdbc.SqlTable;
