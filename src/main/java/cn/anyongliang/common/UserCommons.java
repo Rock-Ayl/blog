@@ -23,28 +23,13 @@ public class UserCommons {
     }
 
     /**
-     * 判断cookieId是否失效
-     * 失效时间：登录后30分钟
+     * 获取用户登录信息
      *
-     * @param cookieId
-     * @return true:有效  false:失效
+     * @return
      */
-    public static boolean validateCookieId(String cookieId) {
-        JsonObject user = Redis.user.getObject(cookieId);
-        //不存在用户信息
-        if (user == null) {
-            //失效
-            return false;
-        }
-        //获取登录时间
-        long loginTime = user.getLong("loginTime");
-        //登录后cookieId的30分钟后
-        if ((loginTime + (1 * 1000 * 60 * 30)) < System.currentTimeMillis()) {
-            //失效
-            return false;
-        }
-        //成功
-        return true;
+    public static JsonObject getUserLoginInfo(String cookieId) {
+        //获取用户信息
+        return Redis.user.getObject(cookieId);
     }
 
     /**

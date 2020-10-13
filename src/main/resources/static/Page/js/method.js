@@ -120,7 +120,7 @@ function readComment(pageIndex, pageSize) {
                     commentList.innerHTML += divString;
                 }
                 //设置最大页数
-                pageMaxIndex = (data.count) / pageSize;
+                pageMaxIndex = (data.totalCount) / pageSize;
             }
         }
     });
