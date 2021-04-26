@@ -24,7 +24,7 @@ public class CommentService {
     @RequestMapping(value = "ReadComment")
     public JsonObject readComment(int pageIndex, int pageSize) {
         //基础Sql
-        StringBuffer sql = new StringBuffer("SELECT a.*,b.userName as realName,b.email as realEmail,d.`name` as role FROM `comment` a LEFT JOIN `user` b ON a.userId=b.id LEFT JOIN roleBinduser c ON b.id = c.userId LEFT JOIN role d ON c.roleId = d.id ORDER BY a.`timestamp` DESC");
+        StringBuffer sql = new StringBuffer("SELECT a.*,b.userName as realName,b.email as realEmail,d.`name` as role FROM `comment` a LEFT JOIN `user` b ON a.userId=b.id LEFT JOIN role_bind_user c ON b.id = c.userId LEFT JOIN role d ON c.roleId = d.id ORDER BY a.`timestamp` DESC");
         //查询并返回
         return StringCommons.queryItemsAndTotalCount(sql, new Object[]{}, pageIndex, pageSize);
     }

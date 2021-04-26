@@ -39,7 +39,7 @@ public class UserCommons {
      */
     public static void userBindRole(long userId, long roleId) {
         //如果没有插入,有就不插入
-        SqlTable.use().insert("INSERT roleBinduser (userId,roleId) SELECT ?,? FROM roleBinduser WHERE NOT EXISTS (SELECT id FROM roleBinduser WHERE userId=? AND roleId=?) LIMIT 1", new Object[]{userId, roleId, userId, roleId});
+        SqlTable.use().insert("INSERT role_bind_user (userId,roleId) SELECT ?,? FROM role_bind_user WHERE NOT EXISTS (SELECT id FROM role_bind_user WHERE userId=? AND roleId=?) LIMIT 1", new Object[]{userId, roleId, userId, roleId});
     }
 
 }

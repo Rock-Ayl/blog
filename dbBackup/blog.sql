@@ -61,10 +61,10 @@ INSERT INTO `role` VALUES (4, '管理员');
 COMMIT;
 
 -- ----------------------------
--- Table structure for roleBinduser
+-- Table structure for role_bind_user
 -- ----------------------------
-DROP TABLE IF EXISTS `roleBinduser`;
-CREATE TABLE `roleBinduser` (
+DROP TABLE IF EXISTS `role_bind_user`;
+CREATE TABLE `role_bind_user` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '用户绑定角色表唯一id',
   `userId` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户id',
   `roleId` bigint(20) NOT NULL DEFAULT '0' COMMENT '角色id',
@@ -72,11 +72,11 @@ CREATE TABLE `roleBinduser` (
 ) ENGINE=InnoDB AUTO_INCREMENT=137 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of roleBinduser
+-- Records of role_bind_user
 -- ----------------------------
 BEGIN;
-INSERT INTO `roleBinduser` VALUES (1, 1, 4);
-INSERT INTO `roleBinduser` VALUES (2, 2, 2);
+INSERT INTO `role_bind_user` VALUES (1, 1, 4);
+INSERT INTO `role_bind_user` VALUES (2, 2, 2);
 COMMIT;
 
 -- ----------------------------

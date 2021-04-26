@@ -67,7 +67,7 @@ public class UserService {
             return JsonObject.Fail("密码不能为空.");
         }
         //获取用户信息
-        JsonObject userObject = SqlTable.use().queryObject("select a.*,c.`name` as role from user a INNER JOIN roleBinduser b ON a.id = b.userId INNER JOIN role c ON c.id= b.roleId where a.userName = ? and a.password = ?", new Object[]{userName, password});
+        JsonObject userObject = SqlTable.use().queryObject("select a.*,c.`name` as role from user a INNER JOIN role_bind_user b ON a.id = b.userId INNER JOIN role c ON c.id= b.roleId where a.userName = ? and a.password = ?", new Object[]{userName, password});
         //判空
         if (userObject == null) {
             return JsonObject.Fail("账号密码错误.");
