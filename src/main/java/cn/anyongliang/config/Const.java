@@ -31,7 +31,7 @@ public class Const {
     public static String JdbcPort = "3306";
     public static String JdbcUser = "root";
     public static String JdbcDBName = "blog";
-    public static String JdbcPassword = "123456";
+    public static String JdbcPassword = "vijoA.vijsd-d.cDkc";
 
     /*mongoDB*/
     public static String MongoHost = PublishHost;
