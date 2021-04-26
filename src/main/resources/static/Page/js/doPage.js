@@ -1,4 +1,4 @@
-var host = "http://www.anyongliang.cn";
+var host = "http://blog.anyongliang.cn";
 
 //home跳转
 function doMain() {

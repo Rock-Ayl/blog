@@ -20,7 +20,7 @@ gradle 5.4
 
 开发工具：IEEA 2019, sublime text 3, Hbuilder X
 
-实例地址：www.anyongliang.cn 
+实例地址：blog.anyongliang.cn 
 
 服务器环境： centos7以上(为了安装DB方便,请选用7,推荐7.5)
 
